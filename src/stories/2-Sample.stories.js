@@ -4,6 +4,7 @@ import Sample from "../components/Sample/Sample";
 export default {
     title: "Choose a title for your component working bench",
     component: Sample,
+    background: []
 };
 
 const data = "Hello world!";
