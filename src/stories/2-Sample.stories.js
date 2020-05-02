@@ -2,12 +2,16 @@ import React from "react";
 import Sample from "../components/Sample/Sample";
 
 export default {
-    title: "Sample",
+    title: "Choose a title for your component working bench",
     component: Sample,
 };
 
-const titleData = "Hello world!";
+const data = "Hello world!";
 
-export const Example = () => {
-    return <Sample buttonText={titleData}/>
+export const Scenario01 = () => {
+    return <Sample buttonText={data}/>
+}
+
+export const Scenario02 = () => {
+    return <Sample buttonText={"my button"}/>
 }
