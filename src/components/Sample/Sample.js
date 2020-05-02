@@ -17,6 +17,14 @@ const Sample = ({ buttonText }) => {
       <button onClick={action("you just clicked the button")}>
         {buttonText}
       </button>
+
+      <hr />
+
+      <div>
+        <span className={"material-icons"}>android</span>
+        <span className={"material-icons"}>bookmark</span>
+        <span className={"material-icons"}>eco</span>
+      </div>
     </div>
   );
 };
