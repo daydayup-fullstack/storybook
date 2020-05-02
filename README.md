@@ -4,7 +4,7 @@
 $ `npm install`
 
 ### How to start storybook? 
-$ `npm start` or `yarn storybook` or `npm run storybook`
+$ `npm start`
 
 
 ### Material Icons - Usage
@@ -38,5 +38,11 @@ stories文件写法, 请参考 `2-Sample.stories.js`
 @import "../../style/variables";
 ```
 
+
+### Storybook addons if you want to explore (Optional)
+[Backgrounds - already installed](https://github.com/storybookjs/storybook/tree/master/addons/backgrounds)
+[Knobs - already installed](https://github.com/storybookjs/storybook/tree/master/addons/knobs)
+[Source - already installed](https://github.com/storybookjs/storybook/tree/master/addons/storysource)
+[Docs - already installed](https://github.com/storybookjs/storybook/tree/master/addons/docs)
 
 
