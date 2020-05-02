@@ -1,5 +1,5 @@
 import React from "react";
-import "./sample.css";
+import "./Sample.css";
 import { action } from "@storybook/addon-actions";
 
 const Sample = ({ buttonText }) => {
