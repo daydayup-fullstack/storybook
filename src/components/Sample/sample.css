@@ -1,0 +1,22 @@
+.sample {
+  font-family: "Poppins", sans-serif;
+  color: #151B26;
+}
+.sample h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.sample h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.sample .body {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.sample .desc {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=sample.css.map */

@@ -1,0 +1,26 @@
+@import "../../style/variables";
+
+.sample {
+  font-family: $font-family;
+  color: $gray-500;
+
+  h1 {
+    font-size: $h1-size;
+    font-weight: $h1-weight;
+  }
+
+  h2 {
+    font-size: $h2-size;
+    font-weight: $h2-weight;
+  }
+
+  .body {
+    font-size: $text-size;
+    font-weight: $text-weight;
+  }
+
+  .desc {
+    font-size: $desc-size;
+    font-weight: $desc-weight;
+  }
+}
