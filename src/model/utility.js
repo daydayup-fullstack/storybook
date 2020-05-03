@@ -1,4 +1,5 @@
 import shortid from "shortid";
+import faker from "faker";
 
 export const colors = [
   "#F6F8F9",
@@ -23,6 +24,9 @@ export const generateRandomColorIndex = () => {
   return Math.floor(Math.random() * colors.length);
 };
 
-export const generateShortid = () => {
-  return shortid.generate();
-}
+export const randomFirstName = () => faker.name.firstName();
+export const randomLastName = () => faker.name.lastName();
+export const randomAvatar =  () => faker.image.avatar();
+export const randomWords = () => faker.random.words();
+export const generateId =  () => shortid.generate();
+export const randomParagraph = () => faker.lorem.paragraph();
