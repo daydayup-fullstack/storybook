@@ -34,3 +34,24 @@ export class Section {
     this.id = id; //string
   }
 }
+
+
+
+/*
+  User
+  - id: String
+  - firstName: String
+  - lastName: String
+  - avatar: String
+  - colorIndex: Number
+*/
+export class User{
+  constructor(id, firstName, lastName, avatar, colorIndex){
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.avatar = avatar;
+    this.colorIndex = colorIndex;
+  }
+}
+
