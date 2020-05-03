@@ -19,7 +19,7 @@ const length = 10;
 
 // mock avatars
 const avatars = [
-    'https://www.cartoonize.net/svgavatars/temp-avatars/svgA042783438729715684.png',
+    'https://smk.org.uk/wp-content/uploads/avatar.jpg',
     'https://www.cartoonize.net/svgavatars/temp-avatars/svgA4969441256135618.png',
     'https://www.cartoonize.net/svgavatars/temp-avatars/svgA23287895074275755.png',
     'https://www.cartoonize.net/svgavatars/temp-avatars/svgA4158187637132811.png',
@@ -33,7 +33,7 @@ const user_1 = {
     id: getID(length),
     firstName: 'yelin',
     lastName: 'liu',
-    avatar: avatars[4],
+    avatar: avatars[0],
     colorIndex: 1
 }
 
