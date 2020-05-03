@@ -46,3 +46,6 @@ stories文件写法, 请参考 `2-Sample.stories.js`
 [Docs - already installed](https://github.com/storybookjs/storybook/tree/master/addons/docs)
 
 
+### Faker
+
+[How to generate placeholder data with faker?](https://www.npmjs.com/package/faker)
