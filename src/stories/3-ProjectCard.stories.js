@@ -2,7 +2,7 @@ import React from "react";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import { action } from "@storybook/addon-actions";
 import { Project, Section } from "../model/model";
-import { generateRandomColorIndex, generateShortid } from "../model/utility";
+import { generateId, generateRandomColorIndex } from "../model/utility";
 
 export default {
   title: "ProjectCard",
@@ -10,14 +10,19 @@ export default {
 };
 
 const randomColorIndex = generateRandomColorIndex();
-const id = generateShortid();
 const sectionData = [
-  new Section("Backlog", generateShortid()),
-  new Section("Ready", generateShortid()),
-  new Section("In Progress", generateShortid()),
+  new Section("Backlog", generateId()),
+  new Section("Ready", generateId()),
+  new Section("In Progress", generateId()),
 ];
 
-const data = new Project(id, "Sprint 1", randomColorIndex, [], sectionData);
+const data = new Project(
+  generateId(),
+  "Sprint 1",
+  randomColorIndex,
+  [],
+  sectionData
+);
 
 export const Text = () => {
   return (
