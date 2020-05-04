@@ -1,8 +1,8 @@
-import "./SideMenu.css";
 import React, { useState } from "react";
+import "./Drawer.css";
 import SideMenuHeader from "../SideMenuHeader/SideMenuHeader";
 
-const SideMenu = () => {
+const Drawer = () => {
   const [shouldCollapse, setShouldCollapse] = useState(false);
 
   const onCollapse = () => setShouldCollapse(true);
@@ -30,4 +30,4 @@ const SideMenu = () => {
   );
 };
 
-export default SideMenu;
+export default Drawer;
