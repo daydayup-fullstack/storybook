@@ -1,0 +1,17 @@
+@import "../../style/variables";
+
+.SideMenuHeader {
+  color: white;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: $h1-size;
+  max-width: 300px;
+
+  span {
+    cursor: pointer;
+  }
+
+}

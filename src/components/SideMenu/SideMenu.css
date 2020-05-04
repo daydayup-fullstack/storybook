@@ -14,18 +14,6 @@
   width: 300px;
   background-color: #151b26;
 }
-.container .left header {
-  color: white;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  font-size: 1.5rem;
-}
-.container .left header span {
-  cursor: pointer;
-}
 .container .collapse {
   margin-left: -300px;
   transition: all 0.3s ease;
