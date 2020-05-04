@@ -33,22 +33,33 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 1.5rem;
-  border: 1px solid red;
 }
 .container .right header .title {
   display: flex;
-  cursor: pointer;
 }
 .container .right header .title .icon {
   display: inline-block;
+  cursor: pointer;
   position: relative;
-  top: 2px;
   margin-right: 2px;
 }
 .container .right header .title h2 {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
+}
+.container .right header .more-content {
+  background: #e8ecee;
+  color: #151b26;
+}
+.container .right .content {
+  height: 100vh;
+  background: #9ca6af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #151b26;
 }
 
 /*# sourceMappingURL=Drawer.css.map */

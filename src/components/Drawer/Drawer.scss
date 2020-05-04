@@ -33,15 +33,13 @@
       align-items: center;
       justify-content: space-between;
       padding-left: 1.5rem;
-      @include debug;
 
       .title {
         display: flex;
-        cursor: pointer;
         .icon {
           display: inline-block;
+          cursor: pointer;
           position: relative;
-          top: 2px;
           margin-right: 2px;
         }
 
@@ -51,6 +49,21 @@
           font-weight: $h1-weight;
         }
       }
+
+      .more-content {
+        background: $gray-200;
+        color: $gray-500;
+      }
+    }
+
+    .content {
+      height: 100vh;
+      background: $gray-300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $h1-size;
+      color: $gray-500;
     }
   }
 }

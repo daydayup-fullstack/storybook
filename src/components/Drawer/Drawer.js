@@ -14,17 +14,21 @@ const Drawer = () => {
         <SideMenuHeader iconName={"menu_open"} onHandleClick={onCollapse} />
       </section>
       <section className={`right ${shouldCollapse ? "collapse" : "expand"}`}>
-        <header>
-          <div className="title" onClick={onExpand}>
+        <header className={"content-header"}>
+          <div className="title">
             {shouldCollapse && (
-              <span className={"material-icons icon"}>menu</span>
+              <span className={"material-icons icon"} onClick={onExpand}>
+                menu
+              </span>
             )}
             <h2>Home</h2>
           </div>
 
-          <div>Right</div>
+          <div className={"more-content"}>-- Right section for more content to insert --</div>
         </header>
-        <div className="content" />
+        <div className="content">
+            -- Put your content here --
+        </div>
       </section>
     </div>
   );
