@@ -13,7 +13,6 @@
     header {
       color: white;
       height: 4rem;
-      @include debug;
       display: flex;
       align-items: center;
       justify-content: space-between;
