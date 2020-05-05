@@ -1,6 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .profile {
   font-family: "Poppins", sans-serif;
-  color: #F6F8F9;
+  color: #f6f8f9;
   font-weight: bolder;
   font-size: 11px;
   width: 24px;
