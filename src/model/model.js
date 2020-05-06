@@ -55,29 +55,3 @@ export class User{
   }
 }
 
-
-/*
-  TaskInfo
-  - id: String
-  -name: String
-  -isCompleted: boolean
-  -dueDate: Date
-  -createdDate: Date
-  -createdBy: String(id)
-  -assignedTo: Array[userId]
-  -columnIndex:Number
-*/
-
-export class TaskInfo {
-  constructor(id, name, isCompleted, dueDate, createdDate, createdBy, assignedTo, columnIndex) {
-    this.id = id;
-    this.name = name;
-    this.isCompleted = isCompleted;
-    this.dueDate = dueDate;
-    this.createdDate = createdDate;
-    this.createdBy = createdBy;
-    this.assignedTo = assignedTo;
-    this.columnIndex = columnIndex;
-  }
-}
-
