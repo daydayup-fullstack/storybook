@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.addNewColumn {
+  height: 100vh;
+  width: 19rem;
+  min-height: 200px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.addNewColumn .header {
+  margin: 0.25rem 0;
+  user-select: none;
+}
+.addNewColumn .header h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #9ca6af;
+  margin-top: 0.5rem;
+}
+.addNewColumn .header h2 span {
+  color: #9ca6af;
+  font-size: 1rem;
+  display: inline-block;
+  margin-right: 0.2rem;
+  position: relative;
+  top: 0.1rem;
+}
+.addNewColumn .header h2:hover {
+  color: #20aaea;
+  cursor: pointer;
+}
+.addNewColumn .header h2:hover span {
+  color: #20aaea;
+}
+.addNewColumn .list {
+  width: 17.5rem;
+  margin: 0.5rem 0;
+  min-height: 80vh;
+  background: linear-gradient(white, #f6f8f9);
+  border-radius: 0.25rem;
+  margin-top: 3rem;
+}
+.addNewColumn .list--show {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=AddNewColumn.css.map */

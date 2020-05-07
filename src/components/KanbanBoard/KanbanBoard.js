@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./KanbanBoard.css";
 import BoardColumn from "../BoardColumn/BoardColumn";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import AddNewColumn from "../AddNewColumn/AddNewColumn";
 
 const KanbanBoard = ({ project }) => {
   const [currentProject, setCurrentProject] = useState(project);
@@ -57,15 +58,7 @@ const KanbanBoard = ({ project }) => {
               />
             ))}
             {provided.placeholder}
-            <div className={"addNewColumn"}>
-              <div className={"header"}>
-                <h2>
-                  <span className={"material-icons"}>add</span>Add column
-                </h2>
-                <div className={"list"} />
-                {/*<input type="text" value={"Add Column"} />*/}
-              </div>
-            </div>
+            <AddNewColumn />
           </div>
         )}
       </Droppable>
