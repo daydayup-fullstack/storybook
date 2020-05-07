@@ -16,6 +16,7 @@
 }
 .addBoardTaskButton span {
   color: #6f7782;
+  user-select: none;
 }
 .addBoardTaskButton:hover {
   cursor: pointer;

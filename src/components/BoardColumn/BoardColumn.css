@@ -34,6 +34,7 @@
 }
 .board-column .header span {
   display: inline-block;
+  user-select: none;
 }
 .board-column .header .button {
   cursor: pointer;

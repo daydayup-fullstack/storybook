@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../style/_variables.scss","AddBoardTaskButton.scss"],"names":[],"mappings":"AAyBA;EACE;EACA;EACA;;;AC1BF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,ODIO;;ACDT;EACE;;AAEA;EACE","file":"AddBoardTaskButton.css"}
+{"version":3,"sourceRoot":"","sources":["../../style/_variables.scss","AddBoardTaskButton.scss"],"names":[],"mappings":"AAyBA;EACE;EACA;EACA;;;AC1BF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,ODIO;ECHP;;AAGF;EACE;;AAEA;EACE","file":"AddBoardTaskButton.css"}
