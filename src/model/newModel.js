@@ -65,8 +65,13 @@ export const project = {
       title: "Something Else",
       taskIds: ["task-00b84b6f", "task-0523c323"],
     },
+    "column-9bbf7964": {
+      id: "column-a9bbf7964",
+      title: "In progress",
+      taskIds: [],
+    },
   },
-  columnOrder: ["column-5a41bf2e", "column-a39bf32f"],
+  columnOrder: ["column-5a41bf2e", "column-a39bf32f", "column-9bbf7964"],
 };
 
 const users = {
