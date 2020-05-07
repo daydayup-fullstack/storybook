@@ -18,6 +18,10 @@
 .board-column--hovered {
   border-color: #e8ecee;
 }
+.board-column--isDragging {
+  border-color: #e8ecee;
+  background: #e8ecee;
+}
 .board-column .header {
   width: 17.5rem;
   display: flex;

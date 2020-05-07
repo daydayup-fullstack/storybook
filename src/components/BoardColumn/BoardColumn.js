@@ -9,13 +9,13 @@ const BoardColumn = ({ column, index, columnId }) => {
 
   return (
     <Draggable draggableId={columnId} index={index} type={"column"}>
-      {(provided) => (
+      {(provided, snapshot) => (
         <div
           {...provided.draggableProps}
           ref={provided.innerRef}
           className={`board-column ${
             shouldHighlighted && "board-column--hovered"
-          }`}
+          } ${snapshot.isDragging && "board-column--isDragging"}`}
         >
           <div
             className="header"

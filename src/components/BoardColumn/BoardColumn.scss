@@ -16,6 +16,11 @@
     border-color: $gray-200;
   }
 
+  &--isDragging {
+    border-color: $gray-200;
+    background: $gray-200;
+  }
+
   .header {
     width: 17.5rem;
     display: flex;
