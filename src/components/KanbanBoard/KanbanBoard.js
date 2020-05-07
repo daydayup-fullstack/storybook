@@ -6,8 +6,6 @@ import { DragDropContext, Droppable } from "react-beautiful-dnd";
 const KanbanBoard = ({ project }) => {
   const [currentProject, setCurrentProject] = useState(project);
 
-  console.log(currentProject.columnOrder);
-
   const onDragEnd = (result) => {
     //    todo: reorder the columns
     const { destination, source, draggableId, type } = result;
