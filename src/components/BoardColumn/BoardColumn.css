@@ -13,6 +13,7 @@
   border: 1px solid transparent;
   border-radius: 0.4rem;
   transition: border-color 0.25s ease;
+  background: #f6f8f9;
 }
 .board-column--hovered {
   border-color: #e8ecee;

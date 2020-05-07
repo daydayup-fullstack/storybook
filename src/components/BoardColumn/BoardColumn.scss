@@ -10,6 +10,7 @@
   border: 1px solid transparent;
   border-radius: 0.4rem;
   transition: border-color 0.25s ease;
+  background: $gray-100;
 
   &--hovered {
     border-color: $gray-200;
