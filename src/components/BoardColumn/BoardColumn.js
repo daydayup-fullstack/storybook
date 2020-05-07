@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AddBoardTaskButton from "../AddBoardTaskButton/AddBoardTaskButton";
 import "./BoardColumn.css";
 import { action } from "@storybook/addon-actions";
@@ -6,6 +6,15 @@ import { Draggable } from "react-beautiful-dnd";
 
 const BoardColumn = ({ column, index, columnId }) => {
   const [shouldHighlighted, setShouldHighlighted] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+
+  const inputElement = useRef(null);
+
+  useEffect(() => {
+    if (inputElement.current) {
+      inputElement.current.focus();
+    }
+  }, [isEditing]);
 
   return (
     <Draggable draggableId={columnId} index={index} type={"column"}>
@@ -16,6 +25,7 @@ const BoardColumn = ({ column, index, columnId }) => {
           className={`board-column ${
             shouldHighlighted && "board-column--hovered"
           } ${snapshot.isDragging && "board-column--isDragging"}`}
+          onClick={() => isEditing && setIsEditing(false)}
         >
           <div
             className="header"
@@ -23,13 +33,23 @@ const BoardColumn = ({ column, index, columnId }) => {
             onMouseEnter={() => setShouldHighlighted(true)}
             onMouseLeave={() => setShouldHighlighted(false)}
           >
-            <span className={"title"}>{column.title}</span>
-            <span
-              className={"material-icons button"}
-              onClick={action("more button clicked")}
-            >
-              more_horiz
-            </span>
+            {!isEditing ? (
+              <>
+                <span className={"title"} onClick={() => setIsEditing(true)}>
+                  {column.title}
+                </span>
+                <span
+                  className={"material-icons button"}
+                  onClick={action("more button clicked")}
+                >
+                  more_horiz
+                </span>
+              </>
+            ) : (
+              <form>
+                <input type="text" ref={inputElement} value={column.title} />
+              </form>
+            )}
           </div>
           <AddBoardTaskButton />
 

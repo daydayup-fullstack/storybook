@@ -15,6 +15,7 @@
   transition: border-color 0.25s ease;
   background: #f6f8f9;
   padding: 1rem;
+  cursor: pointer;
 }
 .board-column--hovered {
   border-color: #e8ecee;
@@ -48,6 +49,16 @@
 }
 .board-column .header .button:hover {
   color: #151b26;
+}
+.board-column .header input {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.4rem 0.25rem;
+  border: 1px solid #9ca6af;
+  border-radius: 0.25rem;
+  width: 17.5rem;
+  margin-bottom: 0.25rem;
 }
 .board-column .list {
   width: 17.5rem;
