@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../style/_variables.scss"],"names":[],"mappings":"AAyBA;EACE;EACA;EACA","file":"KanbanBoard.css"}
+{"version":3,"sourceRoot":"","sources":["../../style/_variables.scss","KanbanBoard.scss"],"names":[],"mappings":"AAyBA;EACE;EACA;EACA;;;ACzBF;EACE","file":"KanbanBoard.css"}

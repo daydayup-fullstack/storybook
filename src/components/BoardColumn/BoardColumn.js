@@ -3,7 +3,7 @@ import AddBoardTaskButton from "../AddBoardTaskButton/AddBoardTaskButton";
 import "./BoardColumn.css";
 import { action } from "@storybook/addon-actions";
 
-const BoardColumn = () => {
+const BoardColumn = ({ column }) => {
   const [shouldHighlighted, setShouldHighlighted] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ const BoardColumn = () => {
         onMouseEnter={() => setShouldHighlighted(true)}
         onMouseLeave={() => setShouldHighlighted(false)}
       >
-        <span className={"title"}>title</span>
+        <span className={"title"}>{column.title}</span>
         <span
           className={"material-icons button"}
           onClick={action("more button clicked")}

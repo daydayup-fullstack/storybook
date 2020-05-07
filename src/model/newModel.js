@@ -1,4 +1,4 @@
-const project = {
+export const project = {
   id: "project-43debfae",
   content: {
     name: "project-name",
