@@ -38,6 +38,20 @@
 .addNewColumn .header h2:hover span {
   color: #20aaea;
 }
+.addNewColumn .header input {
+  height: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 17.5rem;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 0.25rem;
+}
+.addNewColumn .header input:focus {
+  outline: none;
+  border: 1px solid #9ca6af;
+}
 .addNewColumn .list {
   width: 17.5rem;
   margin: 0.5rem 0;
@@ -45,9 +59,10 @@
   background: linear-gradient(white, #f6f8f9);
   border-radius: 0.25rem;
   margin-top: 3rem;
+  visibility: hidden;
 }
 .addNewColumn .list--show {
-  visibility: hidden;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=AddNewColumn.css.map */
