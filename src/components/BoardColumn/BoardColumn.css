@@ -14,6 +14,7 @@
   border-radius: 0.4rem;
   transition: border-color 0.25s ease;
   background: #f6f8f9;
+  padding: 1rem;
 }
 .board-column--hovered {
   border-color: #e8ecee;
