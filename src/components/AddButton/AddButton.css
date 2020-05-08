@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.addButton {
+  height: 1.8rem;
+  width: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.9rem;
+  background: linear-gradient(to right,#FF6262, #ffb32f);
+}
+.addButton span {
+  color: #efefef;
+}
+.addButton:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #ff282c, orange);
+}
+.addButton:hover span {
+  color: white;
+}
+
+/*# sourceMappingURL=AddButton.css.map */
