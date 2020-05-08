@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.addProject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  padding: 1.25rem 0.4rem 5rem 0.4rem;
+  border-radius: 1.875rem;
+}
+
+.addProject:hover {
+  background-color: #f6f8f9;
+  cursor: pointer;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.addProject:hover .addProject__card {
+  border: 2px dashed #151b26;
+}
+
+.addProject:hover .addProject__icon {
+  color: #151b26;
+}
+
+.addProject__card {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 1.25rem;
+  background-color: white;
+  border: 2px dashed #9ca6af;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addProject__icon {
+  font-size: 35px;
+  color: #9ca6af;
+}
+
+.addProject__title {
+  margin-top: 0.625rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  max-height: 2rem;
+  width: 100%;
+}
+/*# sourceMappingURL=AddProject.css.map */

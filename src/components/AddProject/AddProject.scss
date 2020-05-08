@@ -1,0 +1,48 @@
+@import "../../style/variables";
+
+.addProject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  transition: all 0.4s ease-in-out;
+  padding: 1.25rem 0.4rem 5rem 0.4rem;
+  border-radius: 1.875rem;
+
+  &:hover {
+    background-color: $gray-100;
+    cursor: pointer;
+    transform: translateY(-4px);
+    .addProject__card {
+      border: 2px dashed $gray-500;
+    }
+    .addProject__icon {
+      color: $gray-500;
+    }
+  }
+
+  &__card {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 1.25rem;
+    background-color: white;
+    border: 2px dashed $gray-300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 35px;
+    color: $gray-300;
+  }
+
+  &__title {
+    margin-top: 0.625rem;
+    font-size: $text-size;
+    font-weight: $text-weight;
+    text-align: center;
+    max-height: 2rem;
+    width: 100%;
+  }
+}
