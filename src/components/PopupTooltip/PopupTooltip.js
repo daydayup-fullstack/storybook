@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./PopupTooltip.css";
 import { action } from "@storybook/addon-actions";
 
-const PopupTooltip = () => {
-  const [shouldShow, setShouldShow] = useState(false);
-
-  return (
+const PopupTooltip = ({ shouldShow }) => {
+  return shouldShow ? (
     <div className={"popup-tooltip"}>
       <div className="content">
         <ul>
@@ -25,6 +23,8 @@ const PopupTooltip = () => {
         </ul>
       </div>
     </div>
+  ) : (
+    <></>
   );
 };
 
