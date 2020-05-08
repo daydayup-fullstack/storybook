@@ -18,6 +18,18 @@ $gray-300: #9ca6af;
 $gray-400: #6f7782;
 $gray-500: #151b26;
 
+$gradient: linear-gradient(
+                45deg,
+                #ff5263 0%,
+                #ff7381 60%,
+                #fcbd01 115%
+);
+
+$boxShadow: 0 0 0 1px rgba(111, 119, 130, 0.15),
+0 5px 20px 0 rgba(21, 27, 38, 0.08);
+
+$matchingBoxShadowColor: rgba(111, 119, 130, 0.3);
+
 // Mixins
 @mixin debug() {
   border: 1px solid red;
