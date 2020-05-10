@@ -1,28 +1,32 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .sample {
   font-family: "Poppins", sans-serif;
   color: #151b26;
 }
+
 .sample h1 {
   font-size: 1.5rem;
   font-weight: 500;
 }
+
 .sample h2 {
   font-size: 1.1rem;
   font-weight: 500;
 }
+
 .sample .body {
   font-size: 1rem;
   font-weight: 400;
 }
+
 .sample .desc {
   font-size: 0.9rem;
   font-weight: 400;
 }
-
 /*# sourceMappingURL=Sample.css.map */
