@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":["../../style/_variables.scss","AddBoardTaskButton.scss"],"names":[],"mappings":"AAqCA;EACE;EACA;EACA;;;ACtCF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,ODIO;ECHP;;AAGF;EACE;;AAEA;EACE","file":"AddBoardTaskButton.css"}
+{
+    "version": 3,
+    "mappings": "ACqCA,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;CACvB;;ADvCD,AAAA,mBAAmB,CAAC;EAClB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,OAAO;EACd,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,sBAAkB;EAC1C,aAAa,EAAE,OAAO;CAcvB;;AAtBD,AAUE,mBAViB,CAUjB,IAAI,CAAC;EACH,KAAK,ECIE,OAAO;EDHd,WAAW,EAAE,IAAI;CAClB;;AAbH,AAeE,mBAfiB,AAehB,MAAM,CAAC;EACN,MAAM,EAAE,OAAO;CAKhB;;AArBH,AAkBI,mBAlBe,AAehB,MAAM,CAGL,IAAI,CAAC;EACH,KAAK,EAAC,OAAO;CACd",
+    "sources": [
+        "AddBoardTaskButton.scss",
+        "../../style/_variables.scss"
+    ],
+    "names": [],
+    "file": "AddBoardTaskButton.css"
+}

@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":["../../style/_variables.scss","KanbanBoard.scss"],"names":[],"mappings":"AAqCA;EACE;EACA;EACA;;;ACtCF;EACE;EACA","file":"KanbanBoard.css"}
+{
+    "version": 3,
+    "mappings": "ACqCA,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;CACvB;;ADvCD,AAAA,OAAO,CAAC;EACN,OAAO,EAAE,IAAI;EACb,OAAO,EAAE,IAAI;CAGd",
+    "sources": [
+        "KanbanBoard.scss",
+        "../../style/_variables.scss"
+    ],
+    "names": [],
+    "file": "KanbanBoard.css"
+}

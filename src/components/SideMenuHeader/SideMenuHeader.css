@@ -1,21 +1,28 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .SideMenuHeader {
   color: white;
   height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 20px;
   font-size: 1.5rem;
   max-width: 300px;
 }
+
 .SideMenuHeader span {
   cursor: pointer;
 }
-
 /*# sourceMappingURL=SideMenuHeader.css.map */
