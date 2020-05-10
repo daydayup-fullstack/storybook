@@ -8,6 +8,6 @@ export default {
 
 
 export const defaultColor = () => (
-    <ColorArray />
+    <ColorArray onChange={() => console.log('i am changed') } />
   );
-  
+
