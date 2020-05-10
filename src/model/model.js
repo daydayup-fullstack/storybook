@@ -56,7 +56,7 @@ export class User{
 }
 
 /*
-  TaskInfo
+  Task
   - id: String
   -name: String
   -isCompleted: boolean
@@ -65,10 +65,13 @@ export class User{
   -createdBy: String(id)
   -assignedTo: Array[userId]
   -columnIndex:Number
+  -description: String
+  -tag:String
+  -attachment:String
 */
 
-export class TaskInfo {
-  constructor(id, name, isCompleted, dueDate, createdDate, createdBy, assignedTo, columnIndex) {
+export class Task {
+  constructor(id, name, isCompleted, dueDate, createdDate, createdBy, assignedTo, columnIndex,description,tag,attachment) {
     this.id = id;
     this.name = name;
     this.isCompleted = isCompleted;
@@ -77,5 +80,8 @@ export class TaskInfo {
     this.createdBy = createdBy;
     this.assignedTo = assignedTo;
     this.columnIndex = columnIndex;
+    this.description =description;
+    this.tag = tag;
+    this.attachment = attachment
   }
 }

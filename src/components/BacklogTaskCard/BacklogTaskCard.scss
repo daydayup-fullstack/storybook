@@ -1,0 +1,107 @@
+@import "../../style/variables";
+
+.BacklogTaskCardContainerVisible {
+    width: 280px;
+    &_BacklogTaskCard {
+        cursor: pointer;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px 0 rgba(21,27,38,.15);
+        text-align: right;
+
+        &_description{
+            text-align: center;
+        }
+
+        &_more{
+            transition: all 0.2s;
+        }
+
+        &_more:hover{
+            color: #20AAEA;
+        }
+
+        &_icons {
+            text-align: right;  
+            display: flex;
+            &_split,
+            &_thumb,
+            &_calendar,
+            &_identity {                
+                margin: 0.5rem;
+                transition: all 0.2s;
+                justify-content: start;
+            }
+
+            &_split
+            {                               
+                margin-left: auto;
+            }
+
+            &_split:hover, &_thumb:hover,&_calendar:hover,&_identity:hover{
+                color: #20AAEA;
+            }
+        }
+    }
+}
+
+.BacklogTaskCardContainerInvisible {
+    width: 280px;
+    &_BacklogTaskCard {
+        cursor: pointer;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px 0 rgba(21,27,38,.15);
+        text-align: right;
+
+        &_description{
+            text-align: center;
+        }
+
+        &_more{
+            transition: color 0.2s;
+            visibility: hidden;
+        }
+
+        &_more:hover{
+            color: #20AAEA;
+        }
+
+        &_icons {
+            text-align: right;  
+            display: flex;
+            &_split,
+            &_thumb,
+            &_calendar,
+            &_identity {                
+                margin: 0.5rem;
+                transition: color 0.2s;
+                justify-content: start;
+            }
+
+            &_split
+            {                               
+                margin-left: auto;
+            }
+
+            &_calendar,&_identity{
+                visibility: hidden;
+            }
+
+            &_split:hover, &_thumb:hover{
+                color: #20AAEA;
+            }
+        }
+    }
+}
+
+.BacklogTaskCardContainerVisible:hover .BacklogTaskCardContainerVisible_BacklogTaskCard,
+.BacklogTaskCardContainerInvisible:hover .BacklogTaskCardContainerInvisible_BacklogTaskCard {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+}
+
+.BacklogTaskCardContainerVisible_BacklogTaskCard,
+.BacklogTaskCardContainerInvisible_BacklogTaskCard {
+    transition: all 0.2s;
+}

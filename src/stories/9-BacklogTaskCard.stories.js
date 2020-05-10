@@ -1,6 +1,6 @@
 import React from 'react'
-import Task from '../components/Task/Task'
-import {TaskInfo} from '../model/model'
+import BacklogTaskCard from '../components/BacklogTaskCard/BacklogTaskCard'
+import {Task} from '../model/model'
 import {
     generateId,
     randomFirstName,
@@ -8,14 +8,16 @@ import {
     randomDate,
     randomUserIdArray,
     randomNumber,
+    randomSentence,
 } from "../model/utility"
 
 export default {
-    title: "Task",
-    component: Task,
+    title: "BacklogTaskCard",
+    component: BacklogTaskCard,
 }
 
-const task_1 = new TaskInfo(
+
+const task_1 = new Task(
     generateId(),
     randomFirstName() + randomLastName(),
     false,
@@ -23,10 +25,11 @@ const task_1 = new TaskInfo(
     randomDate(),
     randomFirstName() + randomLastName(),
     randomUserIdArray(),
-    randomNumber()
+    randomNumber(),
+    randomSentence(),
 )
 
 export const Task1 = () => {
-    return <Task task={task_1} />
+    return <BacklogTaskCard task={task_1} />
 }
 

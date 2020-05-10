@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.TaskCardContainerVisible {
+  width: 280px;
+}
+
+.TaskCardContainerVisible_TaskCard {
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(21, 27, 38, 0.15);
+          box-shadow: 0 1px 3px 0 rgba(21, 27, 38, 0.15);
+  text-align: right;
+}
+
+.TaskCardContainerVisible_TaskCard-Simple {
+  background-color: #62D26F;
+  margin-left: .7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.TaskCardContainerVisible_TaskCard-Complex {
+  background-color: #E8384F;
+  margin-left: .7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.TaskCardContainerVisible_TaskCard-Normal {
+  background-color: #EEC300;
+  margin-left: .7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.TaskCardContainerVisible_TaskCard-UI, .TaskCardContainerVisible_TaskCard-Epic {
+  background-color: #fd612c;
+  margin-left: .7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.TaskCardContainerVisible_TaskCard_name {
+  text-align: left;
+  margin-left: .6rem;
+  margin-top: .6rem;
+}
+
+.TaskCardContainerVisible_TaskCard_description {
+  text-align: center;
+}
+
+.TaskCardContainerVisible_TaskCard_more {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.TaskCardContainerVisible_TaskCard_more:hover {
+  color: #20AAEA;
+}
+
+.TaskCardContainerVisible_TaskCard_icons {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.TaskCardContainerVisible_TaskCard_icons_calendar, .TaskCardContainerVisible_TaskCard_icons_identity {
+  margin: 0.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.TaskCardContainerVisible_TaskCard_icons_split {
+  margin-left: auto;
+}
+
+.TaskCardContainerVisible_TaskCard_icons_calendar:hover, .TaskCardContainerVisible_TaskCard_icons_identity:hover {
+  color: #20AAEA;
+}
+
+.TaskCardContainerInvisible {
+  width: 280px;
+}
+
+.TaskCardContainerInvisible_TaskCard {
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(21, 27, 38, 0.15);
+          box-shadow: 0 1px 3px 0 rgba(21, 27, 38, 0.15);
+  text-align: right;
+}
+
+.TaskCardContainerInvisible_TaskCard-Simple {
+  margin-left: .7rem;
+  text-align: left;
+  background-color: #62D26F;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.TaskCardContainerInvisible_TaskCard-Complex {
+  background-color: #E8384F;
+  margin-left: .7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.TaskCardContainerInvisible_TaskCard-Normal {
+  background-color: #EEC300;
+  margin-left: .7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.TaskCardContainerInvisible_TaskCard-UI, .TaskCardContainerInvisible_TaskCard-Epic {
+  background-color: #fd612c;
+  margin-left: .7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.TaskCardContainerInvisible_TaskCard_name {
+  text-align: left;
+  margin-left: .6rem;
+  margin-top: .6rem;
+}
+
+.TaskCardContainerInvisible_TaskCard_description {
+  text-align: center;
+}
+
+.TaskCardContainerInvisible_TaskCard_more {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  visibility: hidden;
+}
+
+.TaskCardContainerInvisible_TaskCard_more:hover {
+  color: #20AAEA;
+}
+
+.TaskCardContainerInvisible_TaskCard_icons {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.TaskCardContainerInvisible_TaskCard_icons_calendar, .TaskCardContainerInvisible_TaskCard_icons_identity {
+  margin: 0.5rem;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.TaskCardContainerInvisible_TaskCard_icons_calendar, .TaskCardContainerInvisible_TaskCard_icons_identity {
+  visibility: hidden;
+}
+
+.TaskCardContainerVisible:hover .TaskCardContainerVisible_TaskCard,
+.TaskCardContainerInvisible:hover .TaskCardContainerInvisible_TaskCard {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.TaskCardContainerVisible_TaskCard,
+.TaskCardContainerInvisible_TaskCard {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/*# sourceMappingURL=TaskCard.css.map */

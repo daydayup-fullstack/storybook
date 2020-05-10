@@ -33,3 +33,4 @@ export const randomParagraph = () => faker.lorem.paragraph();
 export const randomDate = ()=> faker.date.recent();
 export const randomUserIdArray=()=>faker.random.arrayElement();
 export const randomNumber = ()=>faker.random.number();
+export const randomSentence = ()=>faker.lorem.sentence();

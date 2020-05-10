@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.BacklogTaskCardContainerVisible {
+  width: 280px;
+}
+
+.BacklogTaskCardContainerVisible_BacklogTaskCard {
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(21, 27, 38, 0.15);
+          box-shadow: 0 1px 3px 0 rgba(21, 27, 38, 0.15);
+  text-align: right;
+}
+
+.BacklogTaskCardContainerVisible_BacklogTaskCard_description {
+  text-align: center;
+}
+
+.BacklogTaskCardContainerVisible_BacklogTaskCard_more {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.BacklogTaskCardContainerVisible_BacklogTaskCard_more:hover {
+  color: #20AAEA;
+}
+
+.BacklogTaskCardContainerVisible_BacklogTaskCard_icons {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.BacklogTaskCardContainerVisible_BacklogTaskCard_icons_split, .BacklogTaskCardContainerVisible_BacklogTaskCard_icons_thumb, .BacklogTaskCardContainerVisible_BacklogTaskCard_icons_calendar, .BacklogTaskCardContainerVisible_BacklogTaskCard_icons_identity {
+  margin: 0.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.BacklogTaskCardContainerVisible_BacklogTaskCard_icons_split {
+  margin-left: auto;
+}
+
+.BacklogTaskCardContainerVisible_BacklogTaskCard_icons_split:hover, .BacklogTaskCardContainerVisible_BacklogTaskCard_icons_thumb:hover, .BacklogTaskCardContainerVisible_BacklogTaskCard_icons_calendar:hover, .BacklogTaskCardContainerVisible_BacklogTaskCard_icons_identity:hover {
+  color: #20AAEA;
+}
+
+.BacklogTaskCardContainerInvisible {
+  width: 280px;
+}
+
+.BacklogTaskCardContainerInvisible_BacklogTaskCard {
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(21, 27, 38, 0.15);
+          box-shadow: 0 1px 3px 0 rgba(21, 27, 38, 0.15);
+  text-align: right;
+}
+
+.BacklogTaskCardContainerInvisible_BacklogTaskCard_description {
+  text-align: center;
+}
+
+.BacklogTaskCardContainerInvisible_BacklogTaskCard_more {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  visibility: hidden;
+}
+
+.BacklogTaskCardContainerInvisible_BacklogTaskCard_more:hover {
+  color: #20AAEA;
+}
+
+.BacklogTaskCardContainerInvisible_BacklogTaskCard_icons {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.BacklogTaskCardContainerInvisible_BacklogTaskCard_icons_split, .BacklogTaskCardContainerInvisible_BacklogTaskCard_icons_thumb, .BacklogTaskCardContainerInvisible_BacklogTaskCard_icons_calendar, .BacklogTaskCardContainerInvisible_BacklogTaskCard_icons_identity {
+  margin: 0.5rem;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.BacklogTaskCardContainerInvisible_BacklogTaskCard_icons_split {
+  margin-left: auto;
+}
+
+.BacklogTaskCardContainerInvisible_BacklogTaskCard_icons_calendar, .BacklogTaskCardContainerInvisible_BacklogTaskCard_icons_identity {
+  visibility: hidden;
+}
+
+.BacklogTaskCardContainerInvisible_BacklogTaskCard_icons_split:hover, .BacklogTaskCardContainerInvisible_BacklogTaskCard_icons_thumb:hover {
+  color: #20AAEA;
+}
+
+.BacklogTaskCardContainerVisible:hover .BacklogTaskCardContainerVisible_BacklogTaskCard,
+.BacklogTaskCardContainerInvisible:hover .BacklogTaskCardContainerInvisible_BacklogTaskCard {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.BacklogTaskCardContainerVisible_BacklogTaskCard,
+.BacklogTaskCardContainerInvisible_BacklogTaskCard {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/*# sourceMappingURL=BacklogTaskCard.css.map */
