@@ -63,10 +63,10 @@ export const project = {
     "column-a39bf32f": {
       id: "column-a39bf32f",
       title: "Something Else",
-      taskIds: ["task-00b84b6f", "task-0523c323"],
+      taskIds: [],
     },
     "column-9bbf7964": {
-      id: "column-a9bbf7964",
+      id: "column-9bbf7964",
       title: "In progress",
       taskIds: [],
     },
