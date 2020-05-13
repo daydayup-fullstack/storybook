@@ -2,11 +2,55 @@ import React, { useEffect, useRef, useState } from "react";
 import AddBoardTaskButton from "../AddBoardTaskButton/AddBoardTaskButton";
 import "./BoardColumn.css";
 import { action } from "@storybook/addon-actions";
-import { Draggable } from "react-beautiful-dnd";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
-const BoardColumn = ({ column, index, columnId }) => {
+const TaskCard = ({ name, index, taskId }) => {
+  return (
+    <Draggable draggableId={taskId} type={"task"} index={index}>
+      {(provided, snapshot) => (
+        <div
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          ref={provided.innerRef}
+          className={"taskCard"}
+        >
+          {name}
+        </div>
+      )}
+    </Draggable>
+  );
+};
+
+const TaskList = ({ tasks, column }) => {
+  return (
+    <Droppable droppableId={column.id} type={"task"}>
+      {(provided) => (
+        <div
+          className={"taskList"}
+          {...provided.droppableProps}
+          ref={provided.innerRef}
+        >
+          {tasks.map((task, index) => (
+            <TaskCard
+              taskId={task.id}
+              name={task.content.name}
+              index={index}
+              key={task.id}
+            />
+          ))}
+          {provided.placeholder}
+        </div>
+      )}
+    </Droppable>
+  );
+};
+
+const BoardColumn = ({ column, index, columnId, allTasks }) => {
   const [shouldHighlighted, setShouldHighlighted] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+  const [tasks, setTasks] = useState(() =>
+    column.taskIds.map((taskId) => allTasks[taskId])
+  );
 
   const inputElement = useRef(null);
 
@@ -15,6 +59,8 @@ const BoardColumn = ({ column, index, columnId }) => {
       inputElement.current.focus();
     }
   }, [isEditing]);
+
+  const onDragEnd = () => {};
 
   return (
     <Draggable draggableId={columnId} index={index} type={"column"}>
@@ -53,7 +99,11 @@ const BoardColumn = ({ column, index, columnId }) => {
           </div>
           <AddBoardTaskButton />
 
-          <div className={"list"} />
+          {
+            <DragDropContext onDragEnd={onDragEnd}>
+              <TaskList tasks={tasks} column={column} />
+            </DragDropContext>
+          }
         </div>
       )}
     </Draggable>

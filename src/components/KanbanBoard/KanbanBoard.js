@@ -55,6 +55,7 @@ const KanbanBoard = ({ project }) => {
                 column={currentProject.columns[columnId]}
                 index={index}
                 columnId={columnId}
+                allTasks={currentProject.tasks}
               />
             ))}
             {provided.placeholder}
