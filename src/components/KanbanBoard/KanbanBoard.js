@@ -55,7 +55,37 @@ const KanbanBoard = ({ project }) => {
         };
 
         setState(newState);
+        return;
       }
+
+      const start = state.columns[source.droppableId];
+      const finish = state.columns[destination.droppableId];
+      const startTaskIds = Array.from(start.taskIds);
+      const finishTaskIds = Array.from(finish.taskIds);
+
+      startTaskIds.splice(source.index, 1);
+      finishTaskIds.splice(destination.index, 0, draggableId);
+
+      const updatedStart = {
+        ...start,
+        taskIds: startTaskIds,
+      };
+
+      const updatedFinish = {
+        ...finish,
+        taskIds: finishTaskIds,
+      };
+
+      const newState = {
+        ...state,
+        columns: {
+          ...state.columns,
+          [updatedStart.id]: updatedStart,
+          [updatedFinish.id]: updatedFinish,
+        },
+      };
+
+      setState(newState);
     }
   };
 

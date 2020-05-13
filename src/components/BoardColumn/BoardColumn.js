@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import AddBoardTaskButton from "../AddBoardTaskButton/AddBoardTaskButton";
 import "./BoardColumn.css";
 import { action } from "@storybook/addon-actions";
-import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import { Draggable, Droppable } from "react-beautiful-dnd";
 
 const TaskCard = ({ name, index, taskId }) => {
   return (
