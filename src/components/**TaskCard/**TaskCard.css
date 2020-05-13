@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.TaskCardContainerVisible {
+  width: 280px;
+}
+.TaskCardContainerVisible_TaskCard {
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(21, 27, 38, 0.15);
+  text-align: right;
+}
+.TaskCardContainerVisible_TaskCard-Simple {
+  background-color: #62D26F;
+  margin-left: 0.7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+.TaskCardContainerVisible_TaskCard-Complex {
+  background-color: #E8384F;
+  margin-left: 0.7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+.TaskCardContainerVisible_TaskCard-Normal {
+  background-color: #EEC300;
+  margin-left: 0.7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+.TaskCardContainerVisible_TaskCard-UI, .TaskCardContainerVisible_TaskCard-Epic {
+  background-color: #fd612c;
+  margin-left: 0.7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+.TaskCardContainerVisible_TaskCard_name {
+  text-align: left;
+  margin-left: 0.6rem;
+  margin-top: 0.6rem;
+}
+.TaskCardContainerVisible_TaskCard_description {
+  text-align: center;
+}
+.TaskCardContainerVisible_TaskCard_more {
+  transition: all 0.2s;
+}
+.TaskCardContainerVisible_TaskCard_more:hover {
+  color: #20AAEA;
+}
+.TaskCardContainerVisible_TaskCard_icons {
+  text-align: right;
+  display: flex;
+}
+.TaskCardContainerVisible_TaskCard_icons_calendar, .TaskCardContainerVisible_TaskCard_icons_identity {
+  margin: 0.5rem;
+  transition: all 0.2s;
+  justify-content: start;
+}
+.TaskCardContainerVisible_TaskCard_icons_split {
+  margin-left: auto;
+}
+.TaskCardContainerVisible_TaskCard_icons_calendar:hover, .TaskCardContainerVisible_TaskCard_icons_identity:hover {
+  color: #20AAEA;
+}
+
+.TaskCardContainerInvisible {
+  width: 280px;
+}
+.TaskCardContainerInvisible_TaskCard {
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(21, 27, 38, 0.15);
+  text-align: right;
+}
+.TaskCardContainerInvisible_TaskCard-Simple {
+  margin-left: 0.7rem;
+  text-align: left;
+  background-color: #62D26F;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+.TaskCardContainerInvisible_TaskCard-Complex {
+  background-color: #E8384F;
+  margin-left: 0.7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+.TaskCardContainerInvisible_TaskCard-Normal {
+  background-color: #EEC300;
+  margin-left: 0.7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+.TaskCardContainerInvisible_TaskCard-UI, .TaskCardContainerInvisible_TaskCard-Epic {
+  background-color: #fd612c;
+  margin-left: 0.7rem;
+  text-align: left;
+  width: 42px;
+  height: 6px;
+  border-radius: 4px;
+}
+.TaskCardContainerInvisible_TaskCard_name {
+  text-align: left;
+  margin-left: 0.6rem;
+  margin-top: 0.6rem;
+}
+.TaskCardContainerInvisible_TaskCard_description {
+  text-align: center;
+}
+.TaskCardContainerInvisible_TaskCard_more {
+  transition: color 0.2s;
+  visibility: hidden;
+}
+.TaskCardContainerInvisible_TaskCard_more:hover {
+  color: #20AAEA;
+}
+.TaskCardContainerInvisible_TaskCard_icons {
+  text-align: right;
+  display: flex;
+}
+.TaskCardContainerInvisible_TaskCard_icons_calendar, .TaskCardContainerInvisible_TaskCard_icons_identity {
+  margin: 0.5rem;
+  transition: color 0.2s;
+  justify-content: start;
+}
+.TaskCardContainerInvisible_TaskCard_icons_calendar, .TaskCardContainerInvisible_TaskCard_icons_identity {
+  visibility: hidden;
+}
+
+.TaskCardContainerVisible:hover .TaskCardContainerVisible_TaskCard,
+.TaskCardContainerInvisible:hover .TaskCardContainerInvisible_TaskCard {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.TaskCardContainerVisible_TaskCard,
+.TaskCardContainerInvisible_TaskCard {
+  transition: all 0.2s;
+}
+
+/*# sourceMappingURL=**TaskCard.css.map */

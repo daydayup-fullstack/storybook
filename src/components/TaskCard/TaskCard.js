@@ -1,53 +1,58 @@
-import React from 'react';
-import './TaskCard.css';
+import React from "react";
+import "./TaskCard.css";
+import { Draggable } from "react-beautiful-dnd";
 
-export default class TaskCard extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            visible: false
-        }
-    }
-
-
-    handleMouseOver = () => {
-        this.setState({ visible: true })
-    }
-
-    handleMouseOut = () => {
-        this.setState({ visible: false })
-    }
-
-
-    render() {
-        const { tag, attachment,name } = this.props.task;
-        const { visible } = this.state;
-        const TaskCardContainerClass = 'TaskCardContainer' + (visible ? 'Visible' : 'Invisible');
-        return (<div className={TaskCardContainerClass} onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} >
-            <div className={TaskCardContainerClass + "_TaskCard"}>
-                <span className={TaskCardContainerClass + "_TaskCard_more material-icons"}>
-                    more_horiz
-            </span>
-                <div className={TaskCardContainerClass + "_TaskCard_description"}>
-                    <img src={attachment} alt="task attachment" />
-                </div>
-                <div className={TaskCardContainerClass + "_TaskCard-" + tag}>
-                </div>
-                <div className={TaskCardContainerClass + "_TaskCard_name"}>
-                    {name}
-                </div>
-                <div className={TaskCardContainerClass + "_TaskCard_icons"}>
-                    <span className={TaskCardContainerClass + "_TaskCard_icons_identity material-icons"}>
-                        perm_identity
-                    </span>
-                    <span className={TaskCardContainerClass + "_TaskCard_icons_calendar material-icons"}>
-                        calendar_today
-                    </span>
-                </div>
+const TaskCard = ({ name, index, taskId }) => {
+  return (
+    <Draggable draggableId={taskId} type={"task"} index={index}>
+      {(provided) => (
+        <div
+          className={"taskCard"}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          ref={provided.innerRef}
+        >
+          <div className="content">
+            <div className={"name"}>{name}</div>
+            <button>
+              <span className={"material-icons more"}>more_horiz</span>
+            </button>
+          </div>
+          <div className="extra">
+            <div className="actions">
+              <ul>
+                <li>
+                  <div className="button">a</div>
+                </li>
+                <li>
+                  <div className="button">b</div>
+                </li>
+              </ul>
             </div>
-        </div>);
-    }
-}
+            <div className="info">
+              <ul>
+                <li>
+                  <span>1</span>
+                  <span className={"material-icons"}>perm_identity</span>
+                </li>
+                {/*<li>*/}
+                {/*  <span className={"material-icons"}>calender_today</span>*/}
+                {/*</li>*/}
+                <li>
+                  <span>2</span>
+                  <span className={"material-icons"}>call_split</span>
+                </li>
+                <li>
+                  <span>3</span>
+                  <span className={"material-icons"}>thumb_up_alt</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+    </Draggable>
+  );
+};
 
-
-
+export default TaskCard;

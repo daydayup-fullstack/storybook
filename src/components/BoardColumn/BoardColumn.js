@@ -3,30 +3,14 @@ import AddBoardTaskButton from "../AddBoardTaskButton/AddBoardTaskButton";
 import "./BoardColumn.css";
 import { action } from "@storybook/addon-actions";
 import { Draggable, Droppable } from "react-beautiful-dnd";
-
-const TaskCard = ({ name, index, taskId }) => {
-  return (
-    <Draggable draggableId={taskId} type={"task"} index={index}>
-      {(provided, snapshot) => (
-        <div
-          {...provided.draggableProps}
-          {...provided.dragHandleProps}
-          ref={provided.innerRef}
-          className={"taskCard"}
-        >
-          {name}
-        </div>
-      )}
-    </Draggable>
-  );
-};
+import TaskCard from "../TaskCard/TaskCard";
 
 const TaskList = ({ tasks, column }) => {
   return (
     <Droppable droppableId={column.id} type={"task"}>
       {(provided) => (
         <div
-          className={"taskList"}
+          className={`taskList ${tasks.length === 0 && "empty"}`}
           {...provided.droppableProps}
           ref={provided.innerRef}
         >
