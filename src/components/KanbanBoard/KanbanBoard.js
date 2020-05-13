@@ -5,10 +5,9 @@ import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import AddNewColumn from "../AddNewColumn/AddNewColumn";
 
 const KanbanBoard = ({ project }) => {
-  const [currentProject, setCurrentProject] = useState(project);
+  const [state, setState] = useState(project);
 
   const onDragEnd = (result) => {
-    //    todo: reorder the columns
     const { destination, source, draggableId, type } = result;
 
     if (!destination) return;
@@ -20,17 +19,43 @@ const KanbanBoard = ({ project }) => {
       return;
 
     if (type === "column") {
-      const newColumnOrder = Array.from(currentProject.columnOrder);
+      const newColumnOrder = Array.from(state.columnOrder);
 
       newColumnOrder.splice(source.index, 1); // remove previous location
       newColumnOrder.splice(destination.index, 0, draggableId);
 
       const newState = {
-        ...currentProject,
+        ...state,
         columnOrder: newColumnOrder,
       };
 
-      setCurrentProject(newState);
+      setState(newState);
+    }
+
+    if (type === "task") {
+      // same column
+      if (destination.droppableId === source.droppableId) {
+        const column = state.columns[source.droppableId];
+        const newTaskIds = Array.from(column.taskIds);
+
+        newTaskIds.splice(source.index, 1);
+        newTaskIds.splice(destination.index, 0, draggableId);
+
+        const newColumn = {
+          ...column,
+          taskIds: newTaskIds,
+        };
+
+        const newState = {
+          ...state,
+          columns: {
+            ...state.columns,
+            [newColumn.id]: newColumn,
+          },
+        };
+
+        setState(newState);
+      }
     }
   };
 
@@ -39,7 +64,7 @@ const KanbanBoard = ({ project }) => {
   return (
     <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart}>
       <Droppable
-        droppableId={currentProject.id}
+        droppableId={state.id}
         direction={"horizontal"}
         type={"column"}
       >
@@ -49,13 +74,14 @@ const KanbanBoard = ({ project }) => {
             {...provided.droppableProps}
             ref={provided.innerRef}
           >
-            {currentProject.columnOrder.map((columnId, index) => (
+            {state.columnOrder.map((columnId, index) => (
               <BoardColumn
                 key={columnId}
-                column={currentProject.columns[columnId]}
+                column={state.columns[columnId]}
                 index={index}
-                columnId={columnId}
-                allTasks={currentProject.tasks}
+                tasks={state.columns[columnId].taskIds.map(
+                  (taskId) => state.tasks[taskId]
+                )}
               />
             ))}
             {provided.placeholder}

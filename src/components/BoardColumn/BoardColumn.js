@@ -45,12 +45,9 @@ const TaskList = ({ tasks, column }) => {
   );
 };
 
-const BoardColumn = ({ column, index, columnId, allTasks }) => {
+const BoardColumn = ({ column, tasks, index }) => {
   const [shouldHighlighted, setShouldHighlighted] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-  const [tasks, setTasks] = useState(() =>
-    column.taskIds.map((taskId) => allTasks[taskId])
-  );
 
   const inputElement = useRef(null);
 
@@ -60,10 +57,8 @@ const BoardColumn = ({ column, index, columnId, allTasks }) => {
     }
   }, [isEditing]);
 
-  const onDragEnd = () => {};
-
   return (
-    <Draggable draggableId={columnId} index={index} type={"column"}>
+    <Draggable draggableId={column.id} index={index} type={"column"}>
       {(provided, snapshot) => (
         <div
           {...provided.draggableProps}
@@ -99,11 +94,7 @@ const BoardColumn = ({ column, index, columnId, allTasks }) => {
           </div>
           <AddBoardTaskButton />
 
-          {
-            <DragDropContext onDragEnd={onDragEnd}>
-              <TaskList tasks={tasks} column={column} />
-            </DragDropContext>
-          }
+          {<TaskList tasks={tasks} column={column} />}
         </div>
       )}
     </Draggable>
