@@ -2,34 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import AddBoardTaskButton from "../AddBoardTaskButton/AddBoardTaskButton";
 import "./BoardColumn.css";
 import { action } from "@storybook/addon-actions";
-import { Draggable, Droppable } from "react-beautiful-dnd";
-import TaskCard from "../TaskCard/TaskCard";
+import { Draggable } from "react-beautiful-dnd";
 
-const TaskList = ({ tasks, column }) => {
-  return (
-    <Droppable droppableId={column.id} type={"task"}>
-      {(provided) => (
-        <div
-          className={`taskList ${tasks.length === 0 && "empty"}`}
-          {...provided.droppableProps}
-          ref={provided.innerRef}
-        >
-          {tasks.map((task, index) => (
-            <TaskCard
-              taskId={task.id}
-              name={task.content.name}
-              index={index}
-              key={task.id}
-            />
-          ))}
-          {provided.placeholder}
-        </div>
-      )}
-    </Droppable>
-  );
-};
-
-const BoardColumn = ({ column, tasks, index }) => {
+const BoardColumn = ({ column, tasks, index, children }) => {
   const [shouldHighlighted, setShouldHighlighted] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
@@ -78,7 +53,7 @@ const BoardColumn = ({ column, tasks, index }) => {
           </div>
           <AddBoardTaskButton />
 
-          {<TaskList tasks={tasks} column={column} />}
+          {children}
         </div>
       )}
     </Draggable>

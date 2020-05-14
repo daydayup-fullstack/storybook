@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.taskCardList {
+  width: 17.5rem;
+  border-radius: 0.25rem;
+  min-height: 60vh;
+}
+
+.empty {
+  background: linear-gradient(white, #f6f8f9);
+}
+
+/*# sourceMappingURL=TaskCardList.css.map */

@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./KanbanBoard.css";
 import BoardColumn from "../BoardColumn/BoardColumn";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import AddNewColumn from "../AddNewColumn/AddNewColumn";
+import TaskCardList from "../TaskCardList/TaskCardList";
 
 const KanbanBoard = ({ project }) => {
   const [state, setState] = useState(project);
-
   const onDragEnd = (result) => {
     const { destination, source, draggableId, type } = result;
 
@@ -89,10 +89,8 @@ const KanbanBoard = ({ project }) => {
     }
   };
 
-  let onDragStart = (result) => {};
-
   return (
-    <DragDropContext onDragEnd={onDragEnd} onDragStart={onDragStart}>
+    <DragDropContext onDragEnd={onDragEnd}>
       <Droppable
         droppableId={state.id}
         direction={"horizontal"}
@@ -112,7 +110,16 @@ const KanbanBoard = ({ project }) => {
                 tasks={state.columns[columnId].taskIds.map(
                   (taskId) => state.tasks[taskId]
                 )}
-              />
+              >
+                {
+                  <TaskCardList
+                    tasks={state.columns[columnId].taskIds.map(
+                      (taskId) => state.tasks[taskId]
+                    )}
+                    column={state.columns[columnId]}
+                  />
+                }
+              </BoardColumn>
             ))}
             {provided.placeholder}
             <AddNewColumn />

@@ -60,13 +60,5 @@
   width: 17.5rem;
   margin-bottom: 0.25rem;
 }
-.board-column .taskList {
-  width: 17.5rem;
-  border-radius: 0.25rem;
-  min-height: 60vh;
-}
-.board-column .empty {
-  background: linear-gradient(white, #f6f8f9);
-}
 
 /*# sourceMappingURL=BoardColumn.css.map */

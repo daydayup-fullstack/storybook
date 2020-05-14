@@ -1,0 +1,11 @@
+@import "../../style/variables";
+
+ .taskCardList {
+    width: 17.5rem;
+    border-radius: 0.25rem;
+    min-height: 60vh;
+  }
+
+  .empty {
+    background: linear-gradient(lighten($gray-100, 5%), $gray-100);
+  }
