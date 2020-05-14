@@ -11,6 +11,7 @@ export const project = {
       id: "task-00b84b6f",
       content: {
         name: "Take out the garbage",
+        isCompleted: false,
         createdOn: 1557121250,
         dueDate: 1559108450,
         authorId: "user-c59d01b5",
@@ -21,6 +22,7 @@ export const project = {
       id: "task-0523c323",
       content: {
         name: "Buy some milk",
+        isCompleted: false,
         createdOn: 1556516450,
         dueDate: 1556526450,
         authorId: "user-c59d01b5",
@@ -42,6 +44,7 @@ export const project = {
       id: "task-70361c2a",
       content: {
         name: "Write more user stories",
+        isCompleted: false,
         createdOn: 1556516450,
         dueDate: 1559108450,
         authorId: "user-85c7203c",
@@ -93,7 +96,7 @@ const users = {
   "user-b803c8e6": {
     id: "user-b803c8e6",
     firstName: "Ollie",
-    lastName: "Ollie",
+    lastName: "Lee",
     avatar:
       "https://s3.amazonaws.com/profile_photos/1171854711778417.pLuY5oITP89IeVzx0MJP_27x27.png",
     colorIndex: 2,

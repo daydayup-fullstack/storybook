@@ -1,6 +1,7 @@
 import React from "react";
 import "./TaskCard.css";
 import { Draggable } from "react-beautiful-dnd";
+import PropTypes from "prop-types";
 
 const TaskCard = ({ name, index, taskId }) => {
   return (
@@ -55,4 +56,18 @@ const TaskCard = ({ name, index, taskId }) => {
   );
 };
 
+TaskCard.propTypes = {
+  task: {
+    id: PropTypes.string,
+    content: {
+      name: PropTypes.string,
+      isCompleted: PropTypes.bool,
+      createdOn: PropTypes.any,
+      dueDate: PropTypes.any,
+      authorId: PropTypes.string,
+      assignedUserIds: PropTypes.array,
+    },
+  },
+  index: PropTypes.number,
+};
 export default TaskCard;
