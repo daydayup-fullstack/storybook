@@ -4,7 +4,7 @@ import "./BoardColumn.css";
 import { action } from "@storybook/addon-actions";
 import { Draggable } from "react-beautiful-dnd";
 
-const BoardColumn = ({ column, tasks, index, children }) => {
+const BoardColumn = ({ column, index, children }) => {
   const [shouldHighlighted, setShouldHighlighted] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 

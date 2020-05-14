@@ -3,9 +3,9 @@ import TaskCard from "../TaskCard/TaskCard";
 import React from "react";
 import "./TaskCardList.css";
 
-const TaskCardList = ({ tasks, column }) => {
+const TaskCardList = ({ tasks, columnId }) => {
   return (
-    <Droppable droppableId={column.id} type={"task"}>
+    <Droppable droppableId={columnId} type={"task"}>
       {(provided) => (
         <div
           className={`taskCardList ${tasks.length === 0 && "empty"}`}
@@ -13,12 +13,7 @@ const TaskCardList = ({ tasks, column }) => {
           ref={provided.innerRef}
         >
           {tasks.map((task, index) => (
-            <TaskCard
-              taskId={task.id}
-              name={task.content.name}
-              index={index}
-              key={task.id}
-            />
+            <TaskCard task={task} index={index} key={task.id} />
           ))}
           {provided.placeholder}
         </div>

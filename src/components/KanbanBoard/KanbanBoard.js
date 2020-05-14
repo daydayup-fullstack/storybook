@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./KanbanBoard.css";
-import BoardColumn from "../BoardColumn/BoardColumn";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import BoardColumn from "../BoardColumn/BoardColumn";
 import AddNewColumn from "../AddNewColumn/AddNewColumn";
 import TaskCardList from "../TaskCardList/TaskCardList";
+import "./KanbanBoard.css";
 
 const KanbanBoard = ({ project }) => {
   const [state, setState] = useState(project);
@@ -107,16 +107,13 @@ const KanbanBoard = ({ project }) => {
                 key={columnId}
                 column={state.columns[columnId]}
                 index={index}
-                tasks={state.columns[columnId].taskIds.map(
-                  (taskId) => state.tasks[taskId]
-                )}
               >
                 {
                   <TaskCardList
                     tasks={state.columns[columnId].taskIds.map(
                       (taskId) => state.tasks[taskId]
                     )}
-                    column={state.columns[columnId]}
+                    columnId={columnId}
                   />
                 }
               </BoardColumn>

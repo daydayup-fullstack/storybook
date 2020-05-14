@@ -2,9 +2,9 @@ import React from "react";
 import "./TaskCard.css";
 import { Draggable } from "react-beautiful-dnd";
 
-const TaskCard = ({ name, index, taskId }) => {
+const TaskCard = ({ task, index }) => {
   return (
-    <Draggable draggableId={taskId} type={"task"} index={index}>
+    <Draggable draggableId={task.id} type={"task"} index={index}>
       {(provided) => (
         <div
           className={"taskCard"}
@@ -13,7 +13,7 @@ const TaskCard = ({ name, index, taskId }) => {
           ref={provided.innerRef}
         >
           <div className="content">
-            <div className={"name"}>{name}</div>
+            <div className={"name"}>{task.content.name}</div>
             <button>
               <span className={"material-icons more"}>more_horiz</span>
             </button>
@@ -35,6 +35,7 @@ const TaskCard = ({ name, index, taskId }) => {
                   <span>1</span>
                   <span className={"material-icons"}>perm_identity</span>
                 </li>
+                {/*TODO - Unknown style conflict to be fixed when integrate components*/}
                 {/*<li>*/}
                 {/*  <span className={"material-icons"}>calender_today</span>*/}
                 {/*</li>*/}
