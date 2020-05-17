@@ -14,16 +14,9 @@ export default class AddTaskPopup extends React.Component {
             userDisplay: true,
             assigneeInput: false,
         }
-        this.assigneeRef = React.createRef();
-        this.textInput = null;
 
-        this.setTextInputRef = e => {
-            this.textInput = e;
-        };
 
-        this.focusTextInput = () => {
-            if (this.textInput) this.textInput.focus();
-        };
+
     }
 
     handleOnNameChange = (e) => {
@@ -41,16 +34,19 @@ export default class AddTaskPopup extends React.Component {
     handleOnProjectPlaceholderClick = (e) => {
         this.setState({
             projectPlaceholder: false,
+            userDisplay:true,
+            assigneeInput: false,
+            assigneeInputText:'',
         })
-        if (this.textInput) this.textInput.focus();
     }
 
     handleOnAssigneeCloseClick = (e) => {
         this.setState({
             AssigneePlaceholder: true,
             userDisplay: false,
+            projectPlaceholder:true,
+            inputProject:'',
         })
-        this.assigneeRef.current.focus();
     }
 
     handleOnAssigneeInputClick = (e) => {
@@ -58,8 +54,9 @@ export default class AddTaskPopup extends React.Component {
             AssigneePlaceholder: false,
             userDisplay: false,
             assigneeInput: true,
+            projectPlaceholder:true,
+            inputProject:'',
         })
-        this.assigneeRef.current.focus();
     }
 
     handleOnAssigneeInputChange = (e) => {
@@ -68,11 +65,15 @@ export default class AddTaskPopup extends React.Component {
         })
     }
 
-    // handleOnProjectPlaceholderReturnClick = (e) => {
-    //     this.setState({
-    //         projectPlaceholder: true,
-    //     })
-    // }
+    handleInitialInputClick = ()=>{
+        this.setState({
+            projectPlaceholder:true,
+            inputProject:'',
+            userDisplay:true,
+            assigneeInput: false,
+            assigneeInputText:'',
+        })
+    }
 
     componentDidMount() {
 
@@ -92,7 +93,7 @@ export default class AddTaskPopup extends React.Component {
 
         return (
             <div className="AddTaskPopup" >
-                <div className="AddTaskPopup_TopIcon">
+                <div className="AddTaskPopup_TopIcon" onClick={this.handleInitialInputClick}>
                     <span className="AddTaskPopup_TopIcon_icon material-icons">
                         minimize
                     </span>
@@ -100,24 +101,24 @@ export default class AddTaskPopup extends React.Component {
                         close
                     </span>
                 </div>
-                <input className="AddTaskPopup_TaskName" value={inputName} onChange={this.handleOnNameChange} placeholder='Task name' autoFocus />
+                <input className="AddTaskPopup_TaskName" value={inputName} onChange={this.handleOnNameChange} placeholder='Task name' autoFocus onClick={this.handleInitialInputClick} />
                 <div className='AddTaskPopup_AssigneeProjectField'>
-                    <span className='AddTaskPopup_AssigneeProjectField_assigneeLabel'>For</span>
+                    <span className='AddTaskPopup_AssigneeProjectField_assigneeLabel' onClick={this.handleInitialInputClick} >For</span>
                     <span className='AddTaskPopup_AssigneeProjectField_token' onClick={this.handleOnAssigneeInputClick}>
                         {userDisplay && <Profile className='AddTaskPopup_AssigneeProjectField_token_avatar' user={this.props.user} />}
                         {userDisplay && <span className='AddTaskPopup_AssigneeProjectField_assigneeLabel AddTaskPopup_AssigneeProjectField_token_username'>{this.props.user.firstName}</span>}
                         {userDisplay && <span className="AddTaskPopup_AssigneeProjectField_token_remove material-icons" onClick={this.handleOnAssigneeCloseClick} >close</span>}
                         {AssigneePlaceholder && <span className='AddTaskPopup_AssigneeProjectField_token_assigneePlaceholder' onClick={this.handleOnAssigneeInputClick}>Assignee</span>}
-                        {assigneeInput && <input className='AddTaskPopup_AssigneeProjectField_projectInput' ref={this.assigneeRef} placeholder='Assignee' onChange={this.handleOnAssigneeInputChange} value={assigneeInputText} />}
+                        {assigneeInput && <input className='AddTaskPopup_AssigneeProjectField_projectInput' placeholder='Assignee' onChange={this.handleOnAssigneeInputChange} value={assigneeInputText} onClick={()=>this.setState({projectPlaceholder:true,})} autoFocus/> }
                     </span>
-                    <span className='AddTaskPopup_AssigneeProjectField_assigneeLabel AddTaskPopup_AssigneeProjectField_projectLabel'>in</span>
+                    <span className='AddTaskPopup_AssigneeProjectField_assigneeLabel AddTaskPopup_AssigneeProjectField_projectLabel' onClick={this.handleInitialInputClick} >in</span>
 
                     {projectPlaceholder 
                     ? <span className='AddTaskPopup_AssigneeProjectField_placeholder' onClick={this.handleOnProjectPlaceholderClick}>Project</span> 
-                    : <input className='AddTaskPopup_AssigneeProjectField_projectInput' placeholder='Project' onChange={this.handleOnProjectChange} ref={this.setTextInputRef} value={inputProject} autoFocus/>}
+                    : <input className='AddTaskPopup_AssigneeProjectField_projectInput' placeholder='Project' onChange={this.handleOnProjectChange} value={inputProject} autoFocus/>}
                 </div>
-                <textarea className='AddTaskPopup_description' placeholder="Description"  ></textarea>
-                <div className="AddTaskPopup_BottomIcon">
+                <textarea className='AddTaskPopup_description' placeholder="Description" onClick={this.handleInitialInputClick} ></textarea>
+                <div className="AddTaskPopup_BottomIcon" >
                     <span className="AddTaskPopup_BottomIcon_icon AddTaskPopup_BottomIcon_text material-icons">
                         text_format
                     </span>
