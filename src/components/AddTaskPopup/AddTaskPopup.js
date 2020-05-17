@@ -111,8 +111,10 @@ export default class AddTaskPopup extends React.Component {
                         {assigneeInput && <input className='AddTaskPopup_AssigneeProjectField_projectInput' ref={this.assigneeRef} placeholder='Assignee' onChange={this.handleOnAssigneeInputChange} value={assigneeInputText} />}
                     </span>
                     <span className='AddTaskPopup_AssigneeProjectField_assigneeLabel AddTaskPopup_AssigneeProjectField_projectLabel'>in</span>
-                    {projectPlaceholder && <span className='AddTaskPopup_AssigneeProjectField_placeholder' onClick={this.handleOnProjectPlaceholderClick}>Project</span>}
-                    {!projectPlaceholder && <input className='AddTaskPopup_AssigneeProjectField_projectInput' placeholder='Project' onChange={this.handleOnProjectChange} ref={this.setTextInputRef} value={inputProject} />}
+
+                    {projectPlaceholder 
+                    ? <span className='AddTaskPopup_AssigneeProjectField_placeholder' onClick={this.handleOnProjectPlaceholderClick}>Project</span> 
+                    : <input className='AddTaskPopup_AssigneeProjectField_projectInput' placeholder='Project' onChange={this.handleOnProjectChange} ref={this.setTextInputRef} value={inputProject} autoFocus/>}
                 </div>
                 <textarea className='AddTaskPopup_description' placeholder="Description"  ></textarea>
                 <div className="AddTaskPopup_BottomIcon">
