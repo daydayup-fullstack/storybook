@@ -1,0 +1,17 @@
+@import "../../style/variables";
+
+.PopupMenu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  .menu {
+    max-width: 200px;
+    background: #fff;
+    border: 1px solid $gray-300;
+    border-radius: 0.2rem;
+    position: relative;
+  }
+}
