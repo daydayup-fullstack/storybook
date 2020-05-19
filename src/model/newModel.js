@@ -77,7 +77,7 @@ export const project = {
   columnOrder: ["column-5a41bf2e", "column-a39bf32f", "column-9bbf7964"],
 };
 
-const users = {
+export const users = {
   "user-c8dc5864": {
     id: "user-c8dc5864",
     firstName: "Scott",
