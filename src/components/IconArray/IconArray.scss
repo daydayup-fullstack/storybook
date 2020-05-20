@@ -1,31 +1,42 @@
 @import "../../style/variables";
 
-
 .IconArray {
-
   .content {
+    border-top: 2px solid $gray-200;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 0.5rem 1.5rem;
-    max-height: 180px;
+    padding: 1rem 1.5rem 0;
+    max-height: 210px;
     overflow-y: scroll;
+    margin: 1rem 0;
 
-    span {
+    .item {
       width: 25%;
-      display: inline-block;
-      text-align: center;
-      font-size: 2rem;
       margin-bottom: 0.5rem;
       padding: 0.5rem;
-      color: $gray-300;
-      border-radius: 0.25rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       &:hover {
         cursor: pointer;
-        background: $gray-200;
-        color: $gray-500;
+        background-color: $gray-200;
+
+        span {
+          filter: invert(9%) sepia(42%) saturate(445%) hue-rotate(179deg)
+            brightness(95%) contrast(98%);
+        }
+      }
+
+      span {
+        font-size: 2rem;
+        filter: invert(76%) sepia(22%) saturate(139%) hue-rotate(167deg)
+          brightness(83%) contrast(87%);
+        display: inline-block;
+        text-align: center;
       }
     }
-
   }
 }

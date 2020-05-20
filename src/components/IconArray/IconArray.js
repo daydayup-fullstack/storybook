@@ -27,6 +27,9 @@ const iconNames = [
   "store",
   "extension",
   "done_outline",
+  "fitness_center",
+  "beenhere",
+  "assessment",
 ];
 
 const IconArray = () => {
@@ -35,9 +38,11 @@ const IconArray = () => {
       <div className="content">
         {iconNames.map((iconName, index) => {
           return (
-            <span key={index} className={"material-icons"}>
-              {iconName}
-            </span>
+            <div className={"item"}>
+              <span key={index} className={"material-icons-two-tone"}>
+                {iconName}
+              </span>
+            </div>
           );
         })}
       </div>
