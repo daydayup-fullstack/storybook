@@ -12,11 +12,14 @@
   left: 0;
 }
 .PopupMenu .menu {
-  max-width: 200px;
+  max-width: 250px;
   background: #fff;
   border: 1px solid #9ca6af;
   border-radius: 0.2rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=PopupMenu.css.map */

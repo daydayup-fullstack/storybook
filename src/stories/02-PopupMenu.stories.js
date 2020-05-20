@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PopupMenu from "../components/PopupMenu/PopupMenu";
+import ColorArray from "../components/ColorArray/ColorArray";
 
 export default {
   title: "Popup Menu",
@@ -41,8 +42,7 @@ const Display = () => {
       </span>
       {shouldShow && (
         <PopupMenu dismiss={dismiss} anchor={anchor}>
-          {" "}
-          popup menu
+          {<ColorArray onChange={() => {}} />}
         </PopupMenu>
       )}
     </div>
