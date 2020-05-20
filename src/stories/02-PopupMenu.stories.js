@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PopupMenu from "../components/PopupMenu/PopupMenu";
 import ColorArray from "../components/ColorArray/ColorArray";
 import IconArray from "../components/IconArray/IconArray";
+import ActionList from "../components/ActionList/ActionList";
 
 export default {
   title: "Popup Menu",
@@ -16,8 +17,8 @@ const styles = {
   cursor: "pointer",
 };
 
-const Display = () => {
-  const [shouldShow, setShouldShow] = React.useState(true);
+const Display = ({ children }) => {
+  const [shouldShow, setShouldShow] = React.useState(false);
   const [anchor, setAnchor] = React.useState({ x: 0, y: 0 });
 
   const handleClick = (e) => {
@@ -43,12 +44,22 @@ const Display = () => {
       </span>
       {shouldShow && (
         <PopupMenu dismiss={dismiss} anchor={anchor}>
-          <ColorArray onChange={() => {}} />
-          <IconArray />
+          {children}
         </PopupMenu>
       )}
     </div>
   );
 };
 
-export const demo = () => <Display />;
+export const colorAndIcon = () => (
+  <Display>
+    <ColorArray onChange={() => {}} />
+    <IconArray />
+  </Display>
+);
+
+export const actionList = () => (
+  <Display>
+    <ActionList />
+  </Display>
+);
