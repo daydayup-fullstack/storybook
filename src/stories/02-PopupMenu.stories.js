@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PopupMenu from "../components/PopupMenu/PopupMenu";
 import ColorArray from "../components/ColorArray/ColorArray";
+import IconArray from "../components/IconArray/IconArray";
 
 export default {
   title: "Popup Menu",
@@ -16,7 +17,7 @@ const styles = {
 };
 
 const Display = () => {
-  const [shouldShow, setShouldShow] = React.useState(false);
+  const [shouldShow, setShouldShow] = React.useState(true);
   const [anchor, setAnchor] = React.useState({ x: 0, y: 0 });
 
   const handleClick = (e) => {
@@ -42,7 +43,8 @@ const Display = () => {
       </span>
       {shouldShow && (
         <PopupMenu dismiss={dismiss} anchor={anchor}>
-          {<ColorArray onChange={() => {}} />}
+          <ColorArray onChange={() => {}} />
+          <IconArray />
         </PopupMenu>
       )}
     </div>

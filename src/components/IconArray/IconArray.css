@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.IconArray .content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem 1.5rem;
+  max-height: 180px;
+  overflow-y: scroll;
+}
+.IconArray .content span {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  color: #9ca6af;
+  border-radius: 0.25rem;
+}
+.IconArray .content span:hover {
+  cursor: pointer;
+  background: #e8ecee;
+  color: #151b26;
+}
+
+/*# sourceMappingURL=IconArray.css.map */
