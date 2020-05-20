@@ -38,10 +38,8 @@ const IconArray = () => {
       <div className="content">
         {iconNames.map((iconName, index) => {
           return (
-            <div className={"item"}>
-              <span key={index} className={"material-icons-two-tone"}>
-                {iconName}
-              </span>
+            <div className={"item"} key={index}>
+              <span className={"material-icons-two-tone"}>{iconName}</span>
             </div>
           );
         })}

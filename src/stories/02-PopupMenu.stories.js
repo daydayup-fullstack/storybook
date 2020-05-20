@@ -3,6 +3,8 @@ import PopupMenu from "../components/PopupMenu/PopupMenu";
 import ColorArray from "../components/ColorArray/ColorArray";
 import IconArray from "../components/IconArray/IconArray";
 import ActionList from "../components/ActionList/ActionList";
+import PersonAssignment from "../components/PersonAssignment/PersonAssignment";
+import { team, users } from "../model/newModel";
 
 export default {
   title: "Popup Menu",
@@ -61,5 +63,11 @@ export const colorAndIcon = () => (
 export const actionList = () => (
   <Display>
     <ActionList />
+  </Display>
+);
+
+export const personAssignment = () => (
+  <Display>
+    <PersonAssignment team={team} />
   </Display>
 );

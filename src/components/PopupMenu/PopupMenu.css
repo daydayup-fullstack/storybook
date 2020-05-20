@@ -12,8 +12,7 @@
   left: 0;
 }
 .PopupMenu .menu {
-  width: fit-content;
-  max-width: 250px;
+  max-width: fit-content;
   background: #fff;
   border: 1px solid #9ca6af;
   border-radius: 0.2rem;
