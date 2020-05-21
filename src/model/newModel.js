@@ -77,43 +77,54 @@ export const project = {
   columnOrder: ["column-5a41bf2e", "column-a39bf32f", "column-9bbf7964"],
 };
 
+export const team = {
+  id: "3d452d24",
+  name: "daydayup",
+  members: ["c8dc5864", "762825b6", "b803c8e6", "e1c540b7", "8ddb8913"],
+};
+
 export const users = {
-  "user-c8dc5864": {
-    id: "user-c8dc5864",
+  c8dc5864: {
+    id: "c8dc5864",
     firstName: "Scott",
     lastName: "Wang",
     avatar:
       "https://s3.amazonaws.com/profile_photos/4720159505425.uVij5QIkQPduW5RhPC9j_27x27.png",
     colorIndex: 0,
+    email: "scotteau@gmail.com",
   },
-  "user-762825b6": {
-    id: "user-762825b6",
+  "762825b6": {
+    id: "762825b6",
     firstName: "Lawrence",
     lastName: "Liu",
-    avatar: "some-avatar-url",
+    avatar: "",
     colorIndex: 4,
+    email: "lawrence415610@gmail.com",
   },
-  "user-b803c8e6": {
-    id: "user-b803c8e6",
+  b803c8e6: {
+    id: "b803c8e6",
     firstName: "Ollie",
     lastName: "Lee",
     avatar:
       "https://s3.amazonaws.com/profile_photos/1171854711778417.pLuY5oITP89IeVzx0MJP_27x27.png",
     colorIndex: 2,
+    email: "sarah19930930@gmail.com",
   },
-  "user-e1c540b7": {
-    id: "user-e1c540b7",
+  e1c540b7: {
+    id: "e1c540b7",
     firstName: "Sarah",
     lastName: "Xiao",
-    avatar: "some-avatar-url",
+    avatar: "",
     colorIndex: 10,
+    email: "myself.ollie.lee@gmail.com",
   },
-  "user-8ddb8913": {
-    id: "user-8ddb8913",
+  "8ddb8913": {
+    id: "8ddb8913",
     firstName: "Silvia",
     lastName: "Silvia",
     avatar:
       "https://s3.amazonaws.com/profile_photos/1171854712057265.7zSf934pYJpZhkV1kn6o_27x27.png",
     colorIndex: 8,
+    email: "hxiaoyin@gmail.com",
   },
 };
