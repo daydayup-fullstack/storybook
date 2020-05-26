@@ -7,7 +7,7 @@ export default {
   component: ModalWindow,
 };
 
-export const modalWindows = () => (
+export const Inviting_People = () => (
   <ModalWindow>
     <InvitingPeople />
   </ModalWindow>
