@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.TaskStory {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem 0;
+  background: #f6f8f9;
+}
+.TaskStory__profile {
+  height: 32px;
+  width: 32px;
+  background: crimson;
+  border-radius: 1.5rem;
+  margin-left: 0.5rem;
+}
+.TaskStory__content {
+  margin-left: 0.5rem;
+  width: 100%;
+}
+.TaskStory__content__header {
+  display: flex;
+  height: 32px;
+  align-items: center;
+}
+.TaskStory__content__header .when {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6f7782;
+  margin-left: 1rem;
+  position: relative;
+}
+.TaskStory__content__extra {
+  list-style: none;
+  color: #9ca6af;
+  font-size: 0.81rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.TaskStory__content__extra li {
+  margin: 0.25rem 0;
+}
+.TaskStory__content__extra li .when {
+  margin-left: 0.25rem;
+  position: relative;
+}
+
+/*# sourceMappingURL=TaskStory.css.map */
