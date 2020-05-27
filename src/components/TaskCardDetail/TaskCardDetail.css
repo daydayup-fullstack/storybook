@@ -1,14 +1,8 @@
 .tcdContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .TCD {
@@ -17,104 +11,81 @@
   border: 1px solid #e8ecee;
   border-radius: 4px;
 }
-
 .TCD__height {
   max-height: 210px;
   overflow: auto;
 }
-
 .TCD__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 12px 24px;
   border-bottom: 1px solid #e8ecee;
 }
-
 .TCD__header > span:not(:nth-of-type(1)) {
   margin-left: 10px;
 }
-
 .TCD__header > span {
   font-size: 20px;
   color: #6f7782;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-
 .TCD__header > span:hover {
   color: #273240;
   cursor: pointer;
 }
-
 .TCD__header > span:nth-of-type(4):hover {
   color: #32c1ff;
   cursor: pointer;
 }
-
 .TCD__header__attach {
   margin-left: auto;
 }
-
 .TCD__header__uncompleted {
   background-color: #fff;
   border: 1px solid #9ca6af;
   color: #6f7782;
   border-radius: 4px;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  transition: all 0.2s;
   font-size: 12px;
   height: 24px;
   padding: 0 7px;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   line-height: 24px;
 }
-
 .TCD__header__uncompleted:hover {
   border-color: #00bf9c;
   color: #00bf9c;
   cursor: pointer;
   background-color: #e2fffa;
 }
-
 .TCD__header__uncompleted__check {
   font-size: 15px;
   margin-right: 4px;
   vertical-align: text-bottom;
 }
-
 .TCD__header__completed {
   background-color: #25e8c8;
   border: 1px solid #25e8c8;
   color: #fff;
   border-radius: 4px;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  transition: all 0.2s;
   font-size: 12px;
   height: 24px;
   padding: 0 7px;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   line-height: 24px;
 }
-
 .TCD__header__completed:hover {
   border-color: #00bf9c;
   background-color: #00bf9c;
   cursor: pointer;
 }
-
 .TCD__header__completed__check {
   font-size: 15px;
   margin-right: 4px;
   vertical-align: text-bottom;
 }
-
 .TCD__taskName {
   width: 80%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -132,20 +103,16 @@
   position: relative;
   left: -7px;
 }
-
 .TCD__taskName:hover {
   border: 1px solid #cbd4db;
 }
-
 .TCD__taskName:focus {
   border: 1px solid #9ca6af;
 }
-
 .TCD__taskPanel {
   margin: 4px 24px;
   overflow: auto;
 }
-
 .TCD__taskPanel__title {
   display: inline-block;
   width: 20%;
@@ -154,7 +121,6 @@
   line-height: 18px;
   color: #6f7782;
 }
-
 .TCD__taskPanel__assignContainer {
   border: 1px solid #fff;
   height: 40px;
@@ -163,24 +129,20 @@
   padding: 4px 7px;
   vertical-align: middle;
 }
-
 .TCD__taskPanel__assignContainer:hover {
   background-color: #f6f8f9;
   border: 1px solid #6f7782;
   border-radius: 4px;
   cursor: pointer;
 }
-
 .TCD__taskPanel__assignContainer:hover .TCD__taskPanel__assignContainer__icon {
   border: 1p x solid #9ca6af;
 }
-
 .TCD__taskPanel__assignContainer__unassigned {
   display: inline-block;
   width: 70%;
   background-color: 0;
 }
-
 .TCD__taskPanel__assignContainer__icon {
   padding: 3px;
   font-weight: lighter;
@@ -189,22 +151,19 @@
   border: 1px dashed #9ca6af;
   vertical-align: -8%;
 }
-
 .TCD__taskPanel__assignContainer__status {
   display: inline-block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #6f7782;
-  margin-left: .2rem;
+  margin-left: 0.2rem;
   vertical-align: 40%;
 }
-
 .TCD__taskPanel__dueDateContainer {
   padding: 3px 8px 0 8px;
   margin-top: 10px;
 }
-
 .TCD__taskPanel__inputContainer {
   border: 1px solid #6f7782;
   height: 40px;
@@ -213,15 +172,13 @@
   padding: 4px 7px;
   vertical-align: middle;
 }
-
 .TCD__taskPanel__inputContainer__input {
   vertical-align: 45%;
-  margin-left: .3rem;
+  margin-left: 0.3rem;
   display: inline-block;
   border: none;
   outline: none;
 }
-
 .TCD__taskPanel__focusedContainer {
   height: 40px;
   line-height: 40px;
@@ -234,7 +191,6 @@
   padding: 0px 8px;
   margin-top: 10px;
 }
-
 .TCD__taskPanel__description {
   vertical-align: text-top;
   height: 70px;
@@ -249,15 +205,12 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid #fff;
 }
-
 .TCD__taskPanel__description:hover {
   border: 1px solid #cbd4db;
 }
-
 .TCD__taskPanel__description:focus {
   border: 1px solid #6f7782;
 }
-
 .TCD__taskPanel__addContainer {
   background-color: #fff;
   border: 1px solid #fff;
@@ -269,21 +222,15 @@
   font-size: 12px;
   font-weight: 400;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 4px 8px;
   position: relative;
   left: 0px;
 }
-
 .TCD__taskPanel__addContainer:hover {
   background-color: #e8ecee;
 }
-
 .TCD__taskPanel__addContainer__plus {
   font-size: 24px;
   font-weight: 800;
@@ -292,24 +239,17 @@
   position: relative;
   top: -4px;
 }
-
 .TCD__footer {
   padding: 0 24px;
   background-color: #f6f8f9;
 }
-
 .TCD__footer__container {
   padding: 8px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .TCD__footer__container__commentContainer {
   margin-left: 8px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   padding: 8px;
   min-height: 80px;
   border-radius: 4px;
@@ -317,7 +257,6 @@
   outline: none;
   background-color: #fff;
 }
-
 .TCD__footer__container__commentContainer__input {
   border: 1px solid #fff;
   outline: none;
@@ -328,49 +267,37 @@
   line-height: 20px;
   width: 100%;
 }
-
 .TCD__footer__container__commentContainer__hideBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 20px;
 }
-
 .TCD__footer__container__commentContainer__hideBar span {
   color: #6f7782;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-
 .TCD__footer__container__commentContainer__hideBar span:hover {
   color: #273240;
 }
-
 .TCD__footer__container__commentContainer__hideBar span:nth-of-type(1) {
   font-size: 27px;
 }
-
 .TCD__footer__container__commentContainer__hideBar span:not(:nth-of-type(1)) {
   margin-left: 10px;
 }
-
 .TCD__footer__container__commentContainer__hideBar button {
   margin-left: auto;
   border-radius: 4px;
   font-size: 13px;
   min-width: 48px;
   text-align: center;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
-  -webkit-transition-property: all;
+  transition-duration: 0.2s;
   transition-property: all;
   outline: none;
   padding: 0 15px;
   height: 32px;
   line-height: 32px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   color: #fff;
   background-color: #14aaf5;
   border: 1px solid #14aaf5;
@@ -378,67 +305,49 @@
   position: relative;
   top: -8px;
 }
-
 .TCD__footer__container__commentContainer__hideBar button:hover {
   background-color: #008ce3;
   border-color: #008ce3;
 }
-
 .TCD__footer__container__commentContainer__hideBar button:active {
   background-color: #006db0;
   border-color: #006db0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .TCD__footer__below {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .TCD__footer__below span:nth-of-type(1) {
   margin: 0 10px 0 33px;
 }
-
-.TCD__footer__below span:nth-of-type(2),
-.TCD__footer__below span:nth-of-type(3) {
+.TCD__footer__below span:nth-of-type(2), .TCD__footer__below span:nth-of-type(3) {
   margin-left: 5px;
 }
-
 .TCD__footer__below span:nth-of-type(4) {
   margin-left: 10px;
 }
-
 .TCD__footer__below span:nth-of-type(5) {
   margin-left: 10px;
   font-size: 20px;
   font-weight: bolder;
   color: #6f7782;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-
 .TCD__footer__below span:nth-of-type(5):hover {
   color: #273240;
 }
-
 .TCD__footer__below__title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #6f7782;
-  margin-right: .2rem;
+  margin-right: 0.2rem;
 }
-
 .TCD__footer__below__profile {
   display: inline-block;
 }
-
 .TCD__footer__below__icon {
   padding: 3px;
   font-weight: lighter;
@@ -447,12 +356,11 @@
   border-radius: 50%;
   border: 1px dashed #9ca6af;
   vertical-align: -8%;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-
 .TCD__footer__below__icon:hover {
   border: 1px solid #273240;
   cursor: pointer;
 }
+
 /*# sourceMappingURL=TaskCardDetail.css.map */

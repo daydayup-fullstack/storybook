@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.ProfilePlaceholder {
+  width: 36px;
+  height: 36px;
+  background: crimson;
+  border-radius: 1.5rem;
+}
+
+.AddMemberButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #9ca6af;
+}
+.AddMemberButton:hover {
+  color: #6f7782;
+}
+.AddMemberButton:hover .AddMemberButton__icon {
+  border-color: #6f7782;
+}
+.AddMemberButton__icon {
+  padding: 0.3rem;
+  border: 2px dashed #9ca6af;
+  border-radius: 1.5rem;
+}
+.AddMemberButton__title {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.TeamMembers {
+  font-family: "Poppins", sans-serif;
+  max-width: 230px;
+}
+.TeamMembers header {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-bottom: 2px solid #e8ecee;
+  margin-bottom: 0.75rem;
+}
+.TeamMembers header:hover span:nth-child(2) {
+  visibility: visible;
+  cursor: pointer;
+  color: #9ca6af;
+}
+.TeamMembers header span:nth-child(2) {
+  font-size: 0.9rem;
+  font-weight: 400;
+  visibility: hidden;
+}
+.TeamMembers__list .MemberItem {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 0.25rem 0;
+  position: relative;
+}
+.TeamMembers__list .MemberItem .information {
+  margin-left: 1rem;
+  position: relative;
+  top: 1px;
+}
+.TeamMembers__list .MemberItem .information span:first-of-type {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #151b26;
+}
+.TeamMembers__list .MemberItem .information span {
+  font-size: 0.81rem;
+  font-weight: 400;
+  color: #9ca6af;
+}
+.TeamMembers__list .MemberItem:hover {
+  cursor: pointer;
+}
+.TeamMembers__list .MemberItem:hover .closeIcon {
+  visibility: visible;
+}
+.TeamMembers__list .MemberItem .closeIcon {
+  position: absolute;
+  right: 0;
+  transform: scale(0.8);
+  color: #9ca6af;
+  visibility: hidden;
+}
+.TeamMembers__list .MemberItem .closeIcon:hover {
+  color: #6f7782;
+}
+
+/*# sourceMappingURL=TeamMembers.css.map */
