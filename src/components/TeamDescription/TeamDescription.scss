@@ -1,0 +1,30 @@
+@import "../../style/variables";
+
+.TeamDescription {
+  font-family: $font-family;
+  max-width: 230px;
+
+  header {
+    padding: 0.5rem 0;
+    font-size: $h2-size;
+    font-weight: $h2-weight;
+    border-bottom: 2px solid $gray-200;
+    margin-bottom: 0.75rem;
+  }
+
+  form {
+    textarea {
+      width: 100%;
+      min-height: 3rem;
+      resize: none;
+      border-radius: 0.25rem;
+      border: 1px solid transparent;
+      font-size: $desc-size*0.8;
+      padding: 0.25rem 0;
+
+      &:hover {
+        border: 1px solid $gray-200;
+      }
+    }
+  }
+}

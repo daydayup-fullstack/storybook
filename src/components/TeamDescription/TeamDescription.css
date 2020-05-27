@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.TeamDescription {
+  font-family: "Poppins", sans-serif;
+  max-width: 230px;
+}
+.TeamDescription header {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-bottom: 2px solid #e8ecee;
+  margin-bottom: 0.75rem;
+}
+.TeamDescription form textarea {
+  width: 100%;
+  min-height: 3rem;
+  resize: none;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  font-size: 0.72rem;
+  padding: 0.25rem 0;
+}
+.TeamDescription form textarea:hover {
+  border: 1px solid #e8ecee;
+}
+
+/*# sourceMappingURL=TeamDescription.css.map */
