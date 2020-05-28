@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.NewUploadBlock {
+  border: 1px solid red;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px dashed #9ca6af;
+}
+.NewUploadBlock:hover {
+  color: #151b26;
+  cursor: pointer;
+}
+.NewUploadBlock:hover span {
+  color: #151b26;
+}
+.NewUploadBlock span {
+  color: #9ca6af;
+  transform: scale(0.8);
+}
+
+/*# sourceMappingURL=NewUploadBlock.css.map */

@@ -1,0 +1,26 @@
+@import "../../style/variables";
+
+.NewUploadBlock {
+  @include debug;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px dashed $gray-300;
+
+  &:hover {
+    color: $gray-500;
+    cursor: pointer;
+
+    span {
+      color: $gray-500;
+    }
+  }
+
+  span {
+    color: $gray-300;
+    transform: scale(0.8);
+  }
+}
