@@ -1,25 +1,36 @@
 import React from "react";
 import "./DisplayPhotoBlock.css";
 
-const DisplayPhotoBlock = () => {
-  //region - imageUrl
-  const imageUrl =
-    "https://media.wired.com/photos/5bd86f1cb0c71179a8e94cbd/16:9/w_1519,h_854,c_limit/macmini1.jpg";
-  //endregion
-
-  const [width, setWidth] = React.useState(200);
-
-  const imageRef = React.useRef();
+export const useCalculated = (type, imageRef) => {
+  const [state, setState] = React.useState(0);
 
   React.useEffect(() => {
     imageRef.current.addEventListener("load", () => {
-      const calculatedWidth = Math.floor(
-        (imageRef.current.clientHeight / imageRef.current.naturalHeight) *
-          imageRef.current.naturalWidth
-      );
-      setWidth(calculatedWidth);
+      let calculated;
+
+      if (type === "width") {
+        calculated = Math.floor(
+          (imageRef.current.clientHeight / imageRef.current.naturalHeight) *
+            imageRef.current.naturalWidth
+        );
+      } else {
+        calculated = Math.floor(
+          (imageRef.current.clientWidth / imageRef.current.naturalWidth) *
+            imageRef.current.naturalHeight
+        );
+      }
+      setState(calculated);
     });
-  }, [imageRef]);
+  }, [imageRef, type]);
+
+  return [state];
+};
+
+const DisplayPhotoBlock = () => {
+  const imageUrl =
+    "https://media.wired.com/photos/5bd86f1cb0c71179a8e94cbd/16:9/w_1519,h_854,c_limit/macmini1.jpg";
+  const imageRef = React.useRef();
+  const [width] = useCalculated("width", imageRef);
 
   return (
     <div className="DisplayPhotoBlock" style={{ width: `${width}px` }}>
