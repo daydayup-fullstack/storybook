@@ -17,10 +17,7 @@ const DisplayPhotoBlock = () => {
         (imageRef.current.clientHeight / imageRef.current.naturalHeight) *
           imageRef.current.naturalWidth
       );
-
       setWidth(calculatedWidth);
-
-      console.log(imageRef.current);
     });
   }, [imageRef]);
 
