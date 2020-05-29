@@ -1,10 +1,3 @@
-@charset 'utf-8';
-
-fieldset {
-    margin: 0;
-    padding: 0;
-}
-
 .ColorPicker {
     display: flex;
     flex-direction: column;
@@ -55,63 +48,63 @@ fieldset {
             color: black;
         }
     }
-    
+
     &--red {
         background-color: #E8384F;
     }
-    
+
     &--orange {
         background-color: #FD612C;
     }
-    
+
     &--yellowOrange {
         background-color: #FD9A00;
     }
-    
+
     &--yellow {
         background-color: #EEC300;
     }
-    
+
     &--yellowGreen {
         background-color: #A4CF30;
     }
-    
+
     &--green {
         background-color: #62D26F;
     }
-    
+
     &--blueGreen {
         background-color: #37C5AB;
     }
-    
+
     &--aqua {
         background-color: #20AAEA;
     }
-    
+
     &--blue {
         background-color: #4186E0;
     }
-    
+
     &--indigo {
         background-color: #7A6FF0;
     }
-    
+
     &--purple {
         background-color: #AA62E3;
     }
-    
+
     &--magenta {
         background-color: #E362E3;
     }
-    
+
     &--hotPink {
         background-color: #EA4E9D;
     }
-    
+
     &--pink {
         background-color: #FC91AD;
     }
-    
+
     &--coolGray {
         background-color: #8DA3A6;
     }

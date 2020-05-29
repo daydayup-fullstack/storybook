@@ -1,9 +1,4 @@
 @charset "UTF-8";
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
 .ColorPicker {
   display: flex;
   flex-direction: column;

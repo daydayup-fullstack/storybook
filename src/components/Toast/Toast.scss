@@ -1,0 +1,58 @@
+@import "../../style/variables";
+
+.Toast {
+  width: 230px;
+  font-family: $font-family;
+  font-size: $desc-size * 0.9;
+  font-weight: $desc-weight;
+  color: $gray-400;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid $gray-200;
+  border-top: 0;
+  margin: 0.5rem 0;
+
+  &__header {
+    height: 0.5rem;
+    background: linear-gradient(to left, #37c5ab, #20aaea);
+  }
+
+  &__content {
+    position: relative;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 125px;
+
+    &__close {
+      position: absolute;
+      width: 10%;
+      top: -8px;
+      right: 0;
+      transform: scale(0.8);
+
+      &:hover {
+        color: $gray-500;
+        cursor: pointer;
+      }
+
+    }
+
+    &__info {
+    }
+
+    &__undo {
+      position: absolute;
+      padding: 0.3rem 0.5rem;
+      border: 1px solid $gray-400;
+      border-radius: 0.25rem;
+      right: 0;
+      bottom: 0;
+
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.InvitingPeople {
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.3rem;
+  min-width: 560px;
+  padding: 2rem;
+}
+.InvitingPeople header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.InvitingPeople header .close {
+  color: #6f7782;
+}
+.InvitingPeople header .close:hover {
+  cursor: pointer;
+  color: #151b26;
+}
+.InvitingPeople__content {
+  display: flex;
+  flex-direction: column;
+}
+.InvitingPeople__content__hint {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+.InvitingPeople__content form .field {
+  margin: 1rem 0;
+}
+.InvitingPeople__content form .field label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6f7782;
+  margin-bottom: 0.25rem;
+}
+.InvitingPeople__content form .field textarea {
+  width: 100%;
+  min-height: 180px;
+  resize: none;
+  border: 1px solid #9ca6af;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+.InvitingPeople__content form .field input {
+  border-radius: 0.25rem;
+  width: 100%;
+  border: 1px solid #9ca6af;
+  padding: 0.5rem;
+}
+.InvitingPeople__content form .InvitingPeople__button {
+  margin-top: 2rem;
+}
+
+/*# sourceMappingURL=InvitingPeople.css.map */

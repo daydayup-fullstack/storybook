@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 0.9rem;
-  background: linear-gradient(right,#FF6262,#ffb32f);
+  background: linear-gradient(to left, #ff6262, #ffb32f);
 
   span {
     color: #f5f5f5;
@@ -15,10 +15,10 @@
 
   &:hover {
     cursor: pointer;
-    background: linear-gradient(right, red,orange);
+    background: linear-gradient(to left, red, orange);
 
     span {
-      color:white;
+      color: white;
     }
   }
 }

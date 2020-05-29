@@ -1,0 +1,38 @@
+@import "../../style/variables";
+
+.Dropzone {
+  background-color: crimson;
+  position: relative;
+
+  @include debug;
+  width: 360px;
+  height: 450px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__bound {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-family;
+    border: 1px dashed $gray-400;
+    background-color: rgba(#fff, 0.8);
+  }
+
+  &__icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: $gray-300;
+  }
+
+  &__title {
+    font-size: $text-size;
+    font-weight: $text-weight;
+    color: $gray-400;
+  }
+}

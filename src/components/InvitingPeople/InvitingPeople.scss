@@ -1,0 +1,72 @@
+@import "../../style/variables";
+
+.InvitingPeople {
+  background: #ffffff;
+  font-family: $font-family;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.3rem;
+  min-width: 560px;
+  padding: 2rem;
+
+  header {
+    font-size: $h1-size;
+    font-weight: $h1-weight;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .close {
+      color: $gray-400;
+
+      &:hover {
+        cursor: pointer;
+        color: $gray-500;
+      }
+    }
+
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    &__hint {
+      font-size: $desc-size;
+      font-weight: $desc-weight;
+      padding: 1rem 0;
+    }
+
+    form {
+      .field {
+        margin: 1rem 0;
+        label {
+          display: block;
+          font-size: $desc-size;
+          font-weight: $desc-weight;
+          color: $gray-400;
+          margin-bottom: 0.25rem;
+        }
+
+        textarea {
+          width: 100%;
+          min-height: 180px;
+          resize: none;
+          border: 1px solid $gray-300;
+          border-radius: 0.25rem;
+          padding: 0.5rem;
+        }
+
+        input {
+          border-radius: 0.25rem;
+          width: 100%;
+          border: 1px solid $gray-300;
+          padding: 0.5rem;
+        }
+      }
+        .InvitingPeople__button {
+          margin-top: 2rem;
+        }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Dropzone {
+  background-color: crimson;
+  position: relative;
+  border: 1px solid red;
+  width: 360px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Dropzone__bound {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  border: 1px dashed #6f7782;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.Dropzone__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #9ca6af;
+}
+.Dropzone__title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6f7782;
+}
+
+/*# sourceMappingURL=Dropzone.css.map */

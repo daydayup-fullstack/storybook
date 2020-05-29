@@ -1,0 +1,109 @@
+@import "../../style/variables";
+
+.ProfilePlaceholder {
+  width: 36px;
+  height: 36px;
+  background: crimson;
+  border-radius: 1.5rem;
+}
+
+.AddMemberButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $gray-300;
+
+  &:hover {
+    color: $gray-400;
+
+    .AddMemberButton__icon {
+      border-color: $gray-400;
+    }
+  }
+
+  &__icon {
+    padding: 0.3rem;
+    border: 2px dashed $gray-300;
+    border-radius: 1.5rem;
+  }
+
+  &__title {
+    margin-left: 1rem;
+    font-size: $desc-size;
+    font-weight: $text-weight;
+  }
+
+}
+
+.TeamMembers {
+  font-family: $font-family;
+  max-width: 230px;
+
+  header {
+    padding: 0.5rem 0;
+    font-size: $h2-size;
+    font-weight: $h2-weight;
+    border-bottom: 2px solid $gray-200;
+    margin-bottom: 0.75rem;
+
+    &:hover {
+      span:nth-child(2) {
+        visibility: visible;
+        cursor: pointer;
+        color: $gray-300;
+      }
+    }
+
+    span:nth-child(2) {
+      font-size: $desc-size;
+      font-weight: $desc-weight;
+      visibility: hidden;
+    }
+  }
+  &__list {
+    .MemberItem {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem 0;
+      padding: 0.25rem 0;
+      position: relative;
+
+      .information {
+        margin-left: 1rem;
+        position: relative;
+        top: 1px;
+        span:first-of-type {
+          display: block;
+          font-size: $text-size;
+          font-weight: $text-weight;
+          color: $gray-500;
+        }
+
+        span {
+          font-size: $desc-size * 0.9;
+          font-weight: $desc-weight;
+          color: $gray-300;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        .closeIcon {
+          visibility: visible;
+        }
+      }
+
+      .closeIcon {
+        position: absolute;
+        right: 0;
+        transform: scale(0.8);
+        color: $gray-300;
+        visibility: hidden;
+
+        &:hover {
+          color: $gray-400;
+        }
+      }
+    }
+  }
+}
