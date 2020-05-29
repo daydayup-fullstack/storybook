@@ -19,7 +19,7 @@
           align-items: center;
   border-radius: 0.9rem;
   background: -webkit-gradient(linear, right top, left top, from(#FF6262), to(#ffb32f));
-  background: linear-gradient(right, #FF6262, #ffb32f);
+
 }
 
 .addButton span {
@@ -29,7 +29,7 @@
 .addButton:hover {
   cursor: pointer;
   background: -webkit-gradient(linear, right top, left top, from(red), to(orange));
-  background: linear-gradient(right, red, orange);
+
 }
 
 .addButton:hover span {
