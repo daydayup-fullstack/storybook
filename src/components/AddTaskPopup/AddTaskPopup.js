@@ -97,7 +97,7 @@ export default class AddTaskPopup extends React.Component {
                     <span className="AddTaskPopup_TopIcon_icon material-icons">
                         minimize
                     </span>
-                    <span className="AddTaskPopup_TopIcon_icon material-icons">
+                    <span className="AddTaskPopup_TopIcon_icon material-icons" onClick={(e)=>{e.nativeEvent.stopImmediatePropagation();this.props.handleTaskDisplay(false)}}>
                         close
                     </span>
                 </div>

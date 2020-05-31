@@ -1,17 +1,56 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MenuBar.css";
 import SideMenuHeader from "../SideMenuHeader/SideMenuHeader";
 import MultipleUserProfile from "../MultipleUserProfile/MultipleUserProfile";
 import { users } from "../../model/newModel"
 import AddButton from "../AddButton/AddButton"
 import Profile from "../Profile/Profile"
+import PopupTooltip from "../PopupTooltip/PopupTooltip"
+import AddTaskPopup from "../AddTaskPopup/AddTaskPopup"
+import { User } from "../../model/model";
+import {
+    generateId,
+    randomFirstName,
+    randomLastName,
+    randomAvatar,
+    generateRandomColorIndex
+} from "../../model/utility"
+const user_1 = new User(
+    generateId(),
+    randomFirstName(),
+    randomLastName(),
+    randomAvatar(),
+    generateRandomColorIndex()
+)
 
-const MenuBar = ({user}) => {
+const Display = () => {
+    const [shouldShow, setShouldShow] = useState(false);
+    useEffect(() => {
+        document.onclick = () => {
+            setShouldShow(false);
+        };
+    }, [setShouldShow]);
+
+    return (
+        <div>
+            <span onClick={(e) => {
+                e.nativeEvent.stopImmediatePropagation();
+                setShouldShow(!shouldShow);
+                console.log(shouldShow)
+            }} ><AddButton />
+            </span>
+
+            <PopupTooltip shouldShow={shouldShow} />
+        </div>
+    );
+};
+
+const MenuBar = ({ user }) => {
     const [shouldCollapse, setShouldCollapse] = useState(false);
-
     const onCollapse = () => setShouldCollapse(true);
     const onExpand = () => setShouldCollapse(false);
     const mock_multiple_users = [users.c8dc5864, users.b803c8e6, users["8ddb8913"]]
+    const [taskDisplay, setTaskDisplay] = useState(true);
     return (
         <div className="container">
             <section className={"left"}>
@@ -47,14 +86,14 @@ const MenuBar = ({user}) => {
                                 <input placeholder='Search' />
                             </span>
                             <span>
-                                <AddButton />
+                                <Display />
                             </span>
                             <span class="material-icons question">help_outline</span>
                             <button>
                                 Upgrade
                             </button>
                             <span>
-                                <Profile user={user}/>
+                                <Profile user={user} />
                             </span>
                         </div>
                     </div>
@@ -62,6 +101,8 @@ const MenuBar = ({user}) => {
                     {/* <div className={"more-content"}></div> */}
                 </header>
                 <div className="content">
+                    {taskDisplay===true ? <AddTaskPopup user={user_1} handleTaskDisplay={setTaskDisplay} /> : <span></span>}
+                    {/* <AddTaskPopup user={user_1} handleTaskDisplay={setTaskDisplay} /> */}
                     -- Put your content here --
         </div>
             </section>
