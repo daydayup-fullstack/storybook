@@ -5,7 +5,7 @@ import { action } from "@storybook/addon-actions";
 const AddButton = () => {
     return (
         <div className={"addButton"} onClick={action("button clicked")}>
-            <span className={"material-icons"}>add</span>
+            <span className={"material-icons add_icon"}>add</span>
         </div>
     );
 };

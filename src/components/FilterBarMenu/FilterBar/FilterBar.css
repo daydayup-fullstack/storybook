@@ -5,6 +5,26 @@
           box-sizing: border-box;
 }
 
+.PopupMenu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.PopupMenu .menu {
+  max-width: fit-content;
+  background: #fff;
+  border: 1px solid #9ca6af;
+  border-radius: 0.2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .container {
   width: 100%;
   height: 100vh;
@@ -94,17 +114,9 @@
   color: #151b26;
 }
 
-.sprintContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.sprintContainer{
   display: flex;
-  position: relative;
-  left: .2rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .sprintContainer > h3 {
@@ -221,7 +233,7 @@
 }
 
 .sprint {
-  background: url(./sprint.svg) 48px 48px;
+  /* background: url(./sprint.svg) 48px 48px; */
   background-size: cover;
   display: inline-block;
   width: 48px;
@@ -236,4 +248,54 @@
   font-size: 1.9rem;
   color: #a2a4a5;
 }
-/*# sourceMappingURL=MenuBar.css.map */
+
+.ProjectCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  padding: 1.25rem 0.4rem 5rem 0.4rem;
+  border-radius: 1.875rem;
+}
+
+.ProjectCard:hover {
+  background-color: #f6f8f9;
+  cursor: pointer;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.ProjectCard .card {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 1.25rem;
+  -webkit-box-shadow: inset 0 -2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 -2px rgba(0, 0, 0, 0.05);
+}
+
+.ProjectCard .title {
+  margin-top: 0.625rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  max-height: 2rem;
+  width: 100%;
+}
+
+
+.multi_user{
+  display: flex; 
+  margin-right:  1rem ;
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=PopupMenu.css.map */

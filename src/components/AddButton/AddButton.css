@@ -5,12 +5,12 @@
 }
 
 .addButton {
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 3rem;
+  width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.9rem;
+  border-radius: 1.5rem;
   background: -webkit-gradient(linear, right top, left top, from(#FF6262), to(#ffb32f));
 
 }
@@ -24,6 +24,10 @@
 }
 .addButton:hover span {
   color: white;
+}
+
+.add_icon{
+  font-size: 2.3rem;
 }
 
 /*# sourceMappingURL=AddButton.css.map */

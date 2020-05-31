@@ -1,14 +1,23 @@
-import React, { useState } from "react";
-import "./MenuBar.css";
-import SideMenuHeader from "../SideMenuHeader/SideMenuHeader";
-import MultipleUserProfile from "../MultipleUserProfile/MultipleUserProfile";
-import { users } from "../../model/newModel"
-import AddButton from "../AddButton/AddButton"
-import Profile from "../Profile/Profile"
+import React, { useRef,useState } from "react";
+import SideMenuHeader from "../../SideMenuHeader/SideMenuHeader";
+import ProjectCard from "../../ProjectCard/ProjectCard";
+import MultipleUserProfile from "../../MultipleUserProfile/MultipleUserProfile";
+import { users } from "../../../model/newModel"
+import AddButton from "../../AddButton/AddButton"
+import Profile from "../../Profile/Profile"
+import "./FilterBar.css";
+import FilterSort from "../FilterSort/FilterSort";
 
-const MenuBar = ({user}) => {
+
+const FilterBar = ({user}) => {
     const [shouldCollapse, setShouldCollapse] = useState(false);
-
+    const styles = {
+        display: "flex",
+        width: "100%",
+        justifyContent: "flex-end",
+        paddingRight:"1rem"
+       
+    };
     const onCollapse = () => setShouldCollapse(true);
     const onExpand = () => setShouldCollapse(false);
     const mock_multiple_users = [users.c8dc5864, users.b803c8e6, users["8ddb8913"]]
@@ -17,7 +26,7 @@ const MenuBar = ({user}) => {
             <section className={"left"}>
                 <SideMenuHeader iconName={"menu_open"} onHandleClick={onCollapse} />
             </section>
-            <section className={`right ${shouldCollapse ? "collapse" : "expand"}`}>
+            <section style={styles} className={`right ${shouldCollapse ? "collapse" : "expand"}`}>
                 <header className={"content-header"}>
                     <div className="title">
                         {shouldCollapse && (
@@ -27,26 +36,26 @@ const MenuBar = ({user}) => {
                         )}
                         <div className="sprintContainer">
                             <div className="sprint"></div>
-                            <h3>Sprint</h3>
+                            <h3 >Sprint</h3>
                             <span className="material-icons">
                                 keyboard_arrow_down
                             </span>
-                            <span className="material-icons">
+                            <span className="material-icons ">
                                 info
                             </span>
-                            <span className="material-icons">
+                            <span className="material-icons ">
                                 star_border
                             </span>
-                            <span>
+                            <span className='multi_user'>
                                 <MultipleUserProfile multipleUsers={mock_multiple_users} projectName={"DayDayUp"} />
                             </span>
                             <span>
-                                <span className="material-icons">
+                                <span className="material-icons search_bar">
                                     search
                                 </span>
                                 <input placeholder='Search' />
                             </span>
-                            <span>
+                            <span className='add_button'>
                                 <AddButton />
                             </span>
                             <span class="material-icons question">help_outline</span>
@@ -57,17 +66,19 @@ const MenuBar = ({user}) => {
                                 <Profile user={user}/>
                             </span>
                         </div>
+                         {/* <div className={"more-content"}></div> */}
+                        {/* <div>
+                            <button >
+                                <FilterSort/>
+                            </button>
+                        </div> */}
                     </div>
 
-                    {/* <div className={"more-content"}></div> */}
-                </header>
-                <div className="content">
-                    -- Put your content here --
-        </div>
+                    
+                </header> 
             </section>
         </div>
     );
 };
 
-export default MenuBar;
-
+export default FilterBar;
